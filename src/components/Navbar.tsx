@@ -14,7 +14,6 @@ const navItems: NavItem[] = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Cases", href: "#cases" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -83,8 +82,15 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <Button size="sm" className="rounded-full px-6 bg-[#0168ff] hover:bg-blue-700">
-            Get Started
+          <Button 
+            size="sm" 
+            className="rounded-full px-6 bg-[#0168ff] hover:bg-blue-700"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavLinkClick("#contact");
+            }}
+          >
+            Contact Us
           </Button>
         </nav>
 
@@ -119,8 +125,15 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <Button size="lg" className="rounded-full mt-4 px-8 bg-[#0168ff] hover:bg-blue-700">
-            Get Started
+          <Button 
+            size="lg" 
+            className="rounded-full mt-4 px-8 bg-[#0168ff] hover:bg-blue-700"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavLinkClick("#contact");
+            }}
+          >
+            Contact Us
           </Button>
         </nav>
       </div>

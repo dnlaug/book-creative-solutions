@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { 
   Facebook, Twitter, Instagram, Linkedin, 
-  ArrowUp 
+  ArrowUp, Mail, MapPin, Phone
 } from "lucide-react";
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-20 pb-6">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="text-2xl font-semibold mb-6">
               agency<span className="text-[#0168ff]">.</span>
@@ -43,6 +43,39 @@ const Footer = () => {
                 <FooterLink key={index} href={item.link}>{item.name}</FooterLink>
               ))}
             </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Contact</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-gray-400">
+                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-[#0168ff]" />
+                <span>123 Creative St, Design City, DC 10101</span>
+              </li>
+              <li className="flex items-center gap-3 text-gray-400">
+                <Phone size={18} className="flex-shrink-0 text-[#0168ff]" />
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-center gap-3 text-gray-400">
+                <Mail size={18} className="flex-shrink-0 text-[#0168ff]" />
+                <span>hello@agencywebsite.com</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Newsletter</h3>
+            <p className="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
+            <div className="flex">
+              <input 
+                type="email" 
+                placeholder="Your email" 
+                className="bg-gray-800 text-gray-200 px-4 py-2 rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-[#0168ff]"
+              />
+              <button className="bg-[#0168ff] hover:bg-blue-700 px-4 py-2 rounded-r-md transition-colors">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
 
