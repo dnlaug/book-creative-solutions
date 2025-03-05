@@ -1,4 +1,3 @@
-
 import AnimatedElement from "./AnimatedElement";
 import { Users, Calendar, Award } from "lucide-react";
 
