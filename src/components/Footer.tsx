@@ -38,7 +38,6 @@ const Footer = () => {
                 { name: "About Us", link: "#about" },
                 { name: "Our Work", link: "#cases" },
                 { name: "Services", link: "#services" },
-                { name: "Careers", link: "#" },
                 { name: "Contact Us", link: "#contact" }
               ].map((item, index) => (
                 <FooterLink key={index} href={item.link}>{item.name}</FooterLink>
