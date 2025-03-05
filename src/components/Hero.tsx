@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import AnimatedElement from "./AnimatedElement";
 import { cn } from "@/lib/utils";
@@ -42,7 +41,7 @@ const Hero = () => {
             <AnimatedElement delay={200} direction="up">
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="rounded-full px-6 group bg-[#0168ff] hover:bg-blue-700">
-                  Get Started
+                  Contact Us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <Button
