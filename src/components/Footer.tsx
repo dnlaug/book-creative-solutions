@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { 
   Facebook, Twitter, Instagram, Linkedin, 
@@ -61,21 +60,6 @@ const Footer = () => {
                 <span>hello@agencywebsite.com</span>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Newsletter</h3>
-            <p className="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
-            <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="bg-gray-800 text-gray-200 px-4 py-2 rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-[#0168ff]"
-              />
-              <button className="bg-[#0168ff] hover:bg-blue-700 px-4 py-2 rounded-r-md transition-colors">
-                Subscribe
-              </button>
-            </div>
           </div>
         </div>
 
