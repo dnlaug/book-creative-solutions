@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedElement
           direction="up"
@@ -64,7 +64,7 @@ const Contact = () => {
           <AnimatedElement direction="right">
             <div className="space-y-8">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#0168ff] flex-shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -74,7 +74,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#0168ff] flex-shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
@@ -93,7 +93,7 @@ const Contact = () => {
                     { step: "Launch & Support", desc: "We ensure a smooth launch and provide ongoing support" }
                   ].map((item, idx) => (
                     <div key={idx} className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-[#0168ff] mt-0.5 flex-shrink-0" />
                       <div>
                         <div className="font-medium">{item.step}</div>
                         <div className="text-sm text-gray-600">{item.desc}</div>
@@ -157,7 +157,7 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  className="w-full rounded-full px-6 py-6 group bg-blue-600 hover:bg-blue-700"
+                  className="w-full rounded-full px-6 py-6 group bg-[#0168ff] hover:bg-blue-700"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}

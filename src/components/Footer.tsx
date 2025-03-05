@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { 
   Facebook, Twitter, Instagram, Linkedin, 
-  ArrowUp, ChevronRight 
+  ArrowUp 
 } from "lucide-react";
 
 const Footer = () => {
@@ -15,10 +15,10 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-20 pb-6">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>
             <div className="text-2xl font-semibold mb-6">
-              agency<span className="text-blue-600">.</span>
+              agency<span className="text-[#0168ff]">.</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-xs">
               We create digital experiences that inspire and drive meaningful connections.
@@ -32,19 +32,16 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
-            <ul className="space-y-4">
-              {["Strategy", "UI/UX Design", "Development", "Digital Marketing", "Brand Identity"].map((item, index) => (
-                <FooterLink key={index} href="#">{item}</FooterLink>
-              ))}
-            </ul>
-          </div>
-
-          <div>
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-4">
-              {["About Us", "Our Work", "Services", "Careers", "Contact Us"].map((item, index) => (
-                <FooterLink key={index} href="#">{item}</FooterLink>
+              {[
+                { name: "About Us", link: "#about" },
+                { name: "Our Work", link: "#cases" },
+                { name: "Services", link: "#services" },
+                { name: "Careers", link: "#" },
+                { name: "Contact Us", link: "#contact" }
+              ].map((item, index) => (
+                <FooterLink key={index} href={item.link}>{item.name}</FooterLink>
               ))}
             </ul>
           </div>
@@ -70,7 +67,7 @@ const Footer = () => {
 
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors z-10"
+        className="fixed bottom-6 right-6 bg-[#0168ff] hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors z-10"
         aria-label="Back to top"
       >
         <ArrowUp size={20} />
@@ -82,7 +79,7 @@ const Footer = () => {
 const SocialIcon = ({ icon }: { icon: React.ReactNode }) => (
   <a
     href="#"
-    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition-colors"
+    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#0168ff] flex items-center justify-center transition-colors"
   >
     {icon}
   </a>

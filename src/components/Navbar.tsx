@@ -44,32 +44,46 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  const handleNavLinkClick = (href: string) => {
+    setIsOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-10",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6 md:px-10",
         scrolled
           ? "bg-white/80 shadow-sm backdrop-blur-card"
           : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-2xl font-semibold">
-          agency<span className="text-blue-600">.</span>
+        <a href="#home" className="text-2xl font-semibold">
+          agency<span className="text-[#0168ff]">.</span>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium transition-colors hover:text-primary/80"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavLinkClick(item.href);
+              }}
+              className="text-sm font-medium transition-colors hover:text-[#0168ff]"
             >
               {item.label}
             </a>
           ))}
-          <Button size="sm" className="rounded-full px-6">
+          <Button size="sm" className="rounded-full px-6 bg-[#0168ff] hover:bg-blue-700">
             Get Started
           </Button>
         </nav>
@@ -97,12 +111,15 @@ const Navbar = () => {
               key={item.href}
               href={item.href}
               className="text-xl font-medium"
-              onClick={toggleMenu}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavLinkClick(item.href);
+              }}
             >
               {item.label}
             </a>
           ))}
-          <Button size="lg" className="rounded-full mt-4 px-8">
+          <Button size="lg" className="rounded-full mt-4 px-8 bg-[#0168ff] hover:bg-blue-700">
             Get Started
           </Button>
         </nav>

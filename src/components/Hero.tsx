@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
@@ -24,24 +24,24 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-6 md:space-y-8">
             <AnimatedElement className="space-y-4" direction="up">
               <div className="inline-block rounded-full px-3 py-1 text-sm bg-gray-100 text-gray-800 font-medium">
                 Digital Agency
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter text-balance">
                 We craft digital experiences that{" "}
-                <span className="text-blue-600">matter</span>
+                <span className="text-[#0168ff]">matter</span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 max-w-lg text-balance">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-lg text-balance">
                 We transform your ideas into exceptional digital products through strategic thinking and creative design.
               </p>
             </AnimatedElement>
 
             <AnimatedElement delay={200} direction="up">
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="rounded-full px-6 group">
+                <Button size="lg" className="rounded-full px-6 group bg-[#0168ff] hover:bg-blue-700">
                   Get Started
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -56,13 +56,13 @@ const Hero = () => {
             </AnimatedElement>
 
             <AnimatedElement delay={400} direction="up">
-              <div className="flex items-center gap-6 pt-6">
+              <div className="flex items-center gap-6 pt-4 md:pt-6">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
                     <div
                       key={i}
                       className={cn(
-                        "w-10 h-10 rounded-full border-2 border-white",
+                        "w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white",
                         `bg-gray-${i * 100}`
                       )}
                     ></div>
@@ -91,14 +91,14 @@ const Hero = () => {
                 />
               </div>
 
-              <div className="absolute -bottom-6 -left-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float">
+              <div className="absolute -bottom-6 -left-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float hidden sm:block">
                 <div className="font-semibold">Creative Design</div>
                 <div className="text-sm text-gray-600">
                   Award-winning designs that inspire
                 </div>
               </div>
 
-              <div className="absolute -top-6 -right-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float animation-delay-1000">
+              <div className="absolute -top-6 -right-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float animation-delay-1000 hidden sm:block">
                 <div className="font-semibold">Digital Strategy</div>
                 <div className="text-sm text-gray-600">
                   Strategic solutions for growth
