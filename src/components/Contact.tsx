@@ -4,7 +4,7 @@ import AnimatedElement from "./AnimatedElement";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, MapPin, Phone, Mail, CheckCircle } from "lucide-react";
+import { Send, Mail, Phone, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -63,44 +63,23 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <AnimatedElement direction="right">
             <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Get in touch</h3>
-                <p className="text-gray-600 mb-6">
-                  Whether you have a question, want to start a project, or simply want to connect, we're here to help.
-                </p>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="font-medium">Email Us</h4>
+                  <p className="text-gray-600">hello@digitalagency.com</p>
+                </div>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Our Location</h4>
-                    <p className="text-gray-600">
-                      123 Design Street, Creative City, 10010
-                    </p>
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+                  <Phone className="w-5 h-5" />
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Email Us</h4>
-                    <p className="text-gray-600">hello@digitalagency.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Call Us</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                  </div>
+                <div>
+                  <h4 className="font-medium">Call Us</h4>
+                  <p className="text-gray-600">+1 (555) 123-4567</p>
                 </div>
               </div>
 
@@ -178,7 +157,7 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  className="w-full rounded-full px-6 py-6 group"
+                  className="w-full rounded-full px-6 py-6 group bg-blue-600 hover:bg-blue-700"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}

@@ -1,7 +1,6 @@
 
 import AnimatedElement from "./AnimatedElement";
-import { Button } from "@/components/ui/button";
-import { Users, Calendar, Award, ArrowRight } from "lucide-react";
+import { Users, Calendar, Award } from "lucide-react";
 
 const About = () => {
   return (
@@ -77,11 +76,6 @@ const About = () => {
                 <p className="text-gray-600">
                   Our mission is to help businesses transform their digital presence through innovative design, strategic thinking, and technical excellence. We believe in creating meaningful experiences that connect brands with their audiences.
                 </p>
-                
-                <Button className="rounded-full px-6 group">
-                  Meet Our Team
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
               </div>
             </div>
           </AnimatedElement>

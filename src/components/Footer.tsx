@@ -15,10 +15,10 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-20 pb-6">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
             <div className="text-2xl font-semibold mb-6">
-              agency<span className="text-blue-400">.</span>
+              agency<span className="text-blue-600">.</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-xs">
               We create digital experiences that inspire and drive meaningful connections.
@@ -47,23 +47,6 @@ const Footer = () => {
                 <FooterLink key={index} href="#">{item}</FooterLink>
               ))}
             </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter to get the latest updates.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="bg-gray-800 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-1 focus:ring-blue-500 w-full"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 transition-colors px-4 py-2 rounded-r-md">
-                <ChevronRight size={20} />
-              </button>
-            </div>
           </div>
         </div>
 
