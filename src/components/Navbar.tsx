@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -62,7 +63,7 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#home" className="text-2xl font-semibold">
+        <a href="#home" className="text-2xl font-semibold z-50">
           agency<span className="text-[#0168ff]">.</span>
         </a>
 
@@ -96,7 +97,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden flex items-center text-primary"
+          className="md:hidden flex items-center z-50"
           aria-label="Toggle Menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -106,16 +107,16 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "fixed inset-0 bg-white z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-0 bg-white/95 backdrop-blur-sm z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <nav className="flex flex-col items-center space-y-6">
+        <nav className="flex flex-col items-center space-y-8">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-xl font-medium"
+              className="text-xl font-medium transition-colors hover:text-[#0168ff]"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
