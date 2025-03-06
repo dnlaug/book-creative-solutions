@@ -104,10 +104,10 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Increasing opacity from 80% to 95% */}
       <div
         className={cn(
-          "fixed inset-0 bg-white/80 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-0 bg-white/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

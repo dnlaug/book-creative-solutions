@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import AnimatedElement from "./AnimatedElement";
 import { cn } from "@/lib/utils";
@@ -8,6 +9,15 @@ const Hero = () => {
     const servicesSection = document.getElementById("services");
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleButtonClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     }
   };
 
@@ -40,7 +50,11 @@ const Hero = () => {
 
             <AnimatedElement delay={200} direction="up">
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="rounded-full px-6 group bg-[#0168ff] hover:bg-blue-700">
+                <Button 
+                  size="lg" 
+                  className="rounded-full px-6 group bg-[#0168ff] hover:bg-blue-700"
+                  onClick={() => handleButtonClick("#contact")}
+                >
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -48,6 +62,7 @@ const Hero = () => {
                   variant="outline"
                   size="lg"
                   className="rounded-full px-6"
+                  onClick={() => handleButtonClick("#cases")}
                 >
                   Our Work
                 </Button>
@@ -84,9 +99,10 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl transform rotate-3 scale-105"></div>
               <div className="relative bg-white p-2 rounded-2xl shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Digital Agency Team"
-                  className="w-full h-auto rounded-xl"
+                  className="w-full h-auto rounded-xl object-cover"
+                  loading="eager"
                 />
               </div>
 
