@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import AnimatedElement from "./AnimatedElement";
 import { Button } from "@/components/ui/button";
@@ -70,7 +69,6 @@ const Cases = () => {
     setTimeout(() => setIsAnimating(false), 500);
   };
 
-  // Auto-advance the carousel
   useEffect(() => {
     const interval = setInterval(() => {
       nextTestimonial();
@@ -116,14 +114,16 @@ const Cases = () => {
                   <h3 className="text-xl font-semibold text-white mt-1">
                     {project.title}
                   </h3>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="w-full sm:w-auto min-w-[140px] mt-3 text-white hover:text-white hover:bg-white/20 h-auto gap-1 group/btn"
-                  >
-                    View Project
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-                  </Button>
+                  <div className="flex items-start mt-3">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-0 group/btn"
+                    >
+                      View Project
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                    </Button>
+                  </div>
                 </div>
               </div>
             </AnimatedElement>
