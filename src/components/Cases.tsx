@@ -119,7 +119,7 @@ const Cases = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="w-fit mt-3 text-white hover:text-white hover:bg-white/20 p-0 h-auto gap-1 group/btn"
+                    className="w-full sm:w-auto min-w-[140px] mt-3 text-white hover:text-white hover:bg-white/20 h-auto gap-1 group/btn"
                   >
                     View Project
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
