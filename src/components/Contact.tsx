@@ -32,11 +32,11 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // You need to replace these with your own EmailJS service ID, template ID, and user ID
-      // Sign up at https://www.emailjs.com/ to get your free credentials
-      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your service ID
-      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
-      const userId = 'YOUR_USER_ID'; // Replace with your user ID
+      // Using the provided service ID and template ID
+      const serviceId = 'service_u36l5ov';
+      const templateId = 'template_w5mvekb';
+      // You'll need to add your User ID/Public Key from EmailJS dashboard
+      const userId = 'YOUR_USER_ID'; // Replace with your EmailJS User ID (public key)
 
       const templateParams = {
         from_name: formData.name,
