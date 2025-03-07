@@ -14,6 +14,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -41,6 +42,7 @@ const Contact = () => {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
+        from_phone: formData.phone,
         message: formData.message,
       };
 
@@ -52,7 +54,7 @@ const Contact = () => {
         duration: 5000,
       });
       
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
@@ -160,6 +162,21 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    className="w-full"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                    Phone Number
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Your phone number"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full"
                   />
                 </div>
