@@ -42,7 +42,6 @@ const Contact = () => {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
-        to_email: "hello@digitalagency.com", // Add recipient email
         from_phone: formData.phone,
         message: formData.message,
       };
