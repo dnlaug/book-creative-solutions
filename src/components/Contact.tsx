@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, Mail, Phone, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -26,20 +27,43 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // You need to replace these with your own EmailJS service ID, template ID, and user ID
+      // Sign up at https://www.emailjs.com/ to get your free credentials
+      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your service ID
+      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
+      const userId = 'YOUR_USER_ID'; // Replace with your user ID
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+      
       toast({
         title: "Message sent!",
         description: "We'll get back to you as soon as possible.",
         duration: 5000,
       });
-      setIsSubmitting(false);
+      
       setFormData({ name: "", email: "", message: "" });
-    }, 1500);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        duration: 5000,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
