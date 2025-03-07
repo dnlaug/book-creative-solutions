@@ -35,8 +35,8 @@ const Contact = () => {
       // Using the provided service ID and template ID
       const serviceId = 'service_u36l5ov';
       const templateId = 'template_w5mvekb';
-      // You'll need to add your User ID/Public Key from EmailJS dashboard
-      const userId = 'YOUR_USER_ID'; // Replace with your EmailJS User ID (public key)
+      // Using the provided EmailJS User ID
+      const userId = 'AOuMRmP3mHsFLYAjs';
 
       const templateParams = {
         from_name: formData.name,
