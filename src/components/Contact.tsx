@@ -4,7 +4,7 @@ import AnimatedElement from "./AnimatedElement";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, Mail, Phone, CheckCircle } from "lucide-react";
+import { Send, Mail, Phone, CheckCircle, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from 'emailjs-com';
 
@@ -106,6 +106,18 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium">Call Us</h4>
                   <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600 mt-1 flex items-center gap-2">
+                    <span>or WhatsApp</span>
+                    <a 
+                      href="https://w.app/BookCriativos" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-[#0168ff] hover:underline"
+                    >
+                      <MessageCircle className="w-4 h-4 mr-1" />
+                      Click here
+                    </a>
+                  </p>
                 </div>
               </div>
 
