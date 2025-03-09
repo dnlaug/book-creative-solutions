@@ -2,7 +2,7 @@
 /* Custom fonts - Make sure you have licenses for these fonts before using in production */
 @font-face {
   font-family: 'Kaleko 205 Heavy';
-  src: url('/fonts/Kaleko205Heavy.woff2') format('woff2');
+  src: url('/fonts/Kaleko205W00-Heavy.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
