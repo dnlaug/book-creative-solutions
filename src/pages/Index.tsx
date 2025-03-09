@@ -25,33 +25,19 @@ const Index = () => {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
-    // Apply patterns to alternating sections
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section, index) => {
-      if (index % 3 === 0) {
-        section.classList.add("pattern-dots");
-      } else if (index % 3 === 1) {
-        section.classList.add("pattern-grid");
-      } else {
-        section.classList.add("pattern-diagonal");
-      }
-    });
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div className="min-h-screen bg-brand-blue">
+    <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <div className="relative">
-        <Services />
-        <About />
-        <Cases />
-        <Contact />
-      </div>
+      <Services />
+      <About />
+      <Cases />
+      <Contact />
       <Footer />
     </div>
   );
