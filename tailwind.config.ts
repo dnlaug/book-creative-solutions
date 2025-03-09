@@ -69,11 +69,14 @@ export default {
 				},
 				blue: {
 					600: '#0168ff',
+					700: '#0157d9',
+					800: '#014ab8',
 				},
 				brand: {
 					orange: '#ffb138',
 					pink: '#fe206b',
 					green: '#3be991',
+					blue: '#0168ff',
 				}
 			},
 			borderRadius: {
@@ -109,6 +112,10 @@ export default {
 				pulse: {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.5' }
+				},
+				pattern: {
+					'0%': { backgroundPosition: '0% 0%' },
+					'100%': { backgroundPosition: '100% 100%' }
 				}
 			},
 			animation: {
@@ -118,7 +125,8 @@ export default {
 				'fade-in-left': 'fade-in-left 0.7s ease-out forwards',
 				'fade-in-right': 'fade-in-right 0.7s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse': 'pulse 3s ease-in-out infinite'
+				'pulse': 'pulse 3s ease-in-out infinite',
+				'pattern': 'pattern 20s ease infinite alternate'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
@@ -126,6 +134,12 @@ export default {
 				kaleko: ['Kaleko 205 Heavy', 'sans-serif'],
 				labrador: ['Labrador B Bold', 'serif'],
 				mairy: ['Mairy Light Italic', 'serif'],
+			},
+			backgroundImage: {
+				'dots-pattern': 'radial-gradient(circle, #ffffff33 1px, transparent 1px)',
+				'grid-pattern': 'linear-gradient(to right, #ffffff10 1px, transparent 1px), linear-gradient(to bottom, #ffffff10 1px, transparent 1px)',
+				'diagonal-pattern': 'repeating-linear-gradient(45deg, #ffffff08 0, #ffffff08 1px, transparent 0, transparent 50%)',
+				'brand-gradient': 'linear-gradient(135deg, #ffb138 0%, #fe206b 50%, #3be991 100%)',
 			}
 		}
 	},
