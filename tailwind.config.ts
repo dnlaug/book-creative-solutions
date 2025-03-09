@@ -68,6 +68,11 @@ export default {
 				},
 				blue: {
 					600: '#0168ff',
+				},
+				brand: {
+					orange: '#ffb138',
+					pink: '#fe206b',
+					green: '#3be991',
 				}
 			},
 			borderRadius: {
@@ -116,7 +121,10 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['Inter', 'sans-serif']
+				display: ['Inter', 'sans-serif'],
+				kaleko: ['Kaleko 205 Heavy', 'sans-serif'],
+				labrador: ['Labrador B Bold', 'serif'],
+				mairy: ['Mairy Light Italic', 'serif'],
 			}
 		}
 	},

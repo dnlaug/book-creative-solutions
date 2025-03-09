@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import AnimatedElement from "./AnimatedElement";
 import { Button } from "@/components/ui/button";
@@ -80,13 +81,13 @@ const Cases = () => {
     <section id="cases" className="section bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedElement direction="up" className="text-center mb-16 max-w-2xl mx-auto">
-          <div className="inline-block rounded-full px-3 py-1 text-sm bg-gray-200 text-gray-800 font-medium mb-4">
+          <div className="inline-block rounded-full px-3 py-1 text-sm bg-brand-pink/20 text-gray-800 font-labrador mb-4">
             Our Work
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-kaleko mb-4 tracking-tight text-brand-pink">
             Featured projects
           </h2>
-          <p className="text-lg text-gray-600 text-balance">
+          <p className="text-lg text-gray-600 text-balance font-mairy">
             Explore our portfolio of successful projects that have helped our clients achieve their goals.
           </p>
         </AnimatedElement>
@@ -108,17 +109,17 @@ const Cases = () => {
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <span className="text-sm font-medium text-blue-300">
+                  <span className="text-sm font-labrador text-brand-green">
                     {project.category}
                   </span>
-                  <h3 className="text-xl font-semibold text-white mt-1">
+                  <h3 className="text-xl font-kaleko text-white mt-1">
                     {project.title}
                   </h3>
                   <div className="flex items-start mt-3">
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-0 group/btn"
+                      className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-0 group/btn font-mairy"
                     >
                       View Project
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
@@ -131,19 +132,19 @@ const Cases = () => {
         </div>
 
         <AnimatedElement direction="up" delay={450} className="mt-16 text-center">
-          <Button variant="outline" size="lg" className="rounded-full px-8 group">
+          <Button variant="outline" size="lg" className="rounded-full px-8 group font-labrador border-brand-pink text-brand-pink hover:bg-brand-pink/10">
             View All Work
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </AnimatedElement>
 
         <AnimatedElement direction="up" delay={600} className="mt-24">
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border-t-4 border-brand-orange">
             <div className="text-center mb-10">
-              <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
+              <h3 className="text-2xl md:text-3xl font-kaleko tracking-tight mb-4 text-brand-orange">
                 What our clients say about us
               </h3>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-gray-600 max-w-2xl mx-auto font-mairy">
                 We're proud of the relationships we've built and the impact we've made for our clients.
               </p>
             </div>
@@ -155,12 +156,12 @@ const Cases = () => {
                   style={{ transform: isAnimating ? 'scale(0.96)' : 'scale(1)' }}
                 >
                   <div className="relative p-8 md:p-10 bg-gray-50 rounded-2xl border border-gray-100">
-                    <div className="absolute top-6 left-6 text-blue-600/20">
+                    <div className="absolute top-6 left-6 text-brand-green/20">
                       <Quote size={48} className="rotate-180" />
                     </div>
                     
                     <div className="relative z-10">
-                      <p className="text-lg md:text-xl text-gray-700 font-medium mb-8">
+                      <p className="text-lg md:text-xl text-gray-700 font-mairy mb-8">
                         {testimonials[currentIndex].content}
                       </p>
                       
@@ -171,8 +172,8 @@ const Cases = () => {
                           className="w-12 h-12 rounded-full object-cover"
                         />
                         <div>
-                          <div className="font-semibold">{testimonials[currentIndex].author}</div>
-                          <div className="text-sm text-gray-500">{testimonials[currentIndex].position}</div>
+                          <div className="font-kaleko">{testimonials[currentIndex].author}</div>
+                          <div className="text-sm text-gray-500 font-labrador">{testimonials[currentIndex].position}</div>
                         </div>
                       </div>
                     </div>
@@ -186,7 +187,7 @@ const Cases = () => {
                     key={idx}
                     onClick={() => setCurrentIndex(idx)}
                     className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      currentIndex === idx ? 'bg-blue-600 scale-125' : 'bg-gray-300'
+                      currentIndex === idx ? 'bg-brand-pink scale-125' : 'bg-gray-300'
                     }`}
                     aria-label={`Go to testimonial ${idx + 1}`}
                   />
@@ -196,7 +197,7 @@ const Cases = () => {
               <div className="absolute top-1/2 -translate-y-1/2 left-0 -ml-4 md:-ml-6">
                 <button
                   onClick={prevTestimonial}
-                  className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-blue-600 hover:text-white transition-colors"
+                  className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-brand-pink hover:text-white transition-colors"
                   aria-label="Previous testimonial"
                 >
                   <ArrowLeft size={18} />
@@ -206,7 +207,7 @@ const Cases = () => {
               <div className="absolute top-1/2 -translate-y-1/2 right-0 -mr-4 md:-mr-6">
                 <button
                   onClick={nextTestimonial}
-                  className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-blue-600 hover:text-white transition-colors"
+                  className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-brand-pink hover:text-white transition-colors"
                   aria-label="Next testimonial"
                 >
                   <RightArrow size={18} />

@@ -81,13 +81,13 @@ const Contact = () => {
           direction="up"
           className="text-center mb-16 max-w-2xl mx-auto"
         >
-          <div className="inline-block rounded-full px-3 py-1 text-sm bg-[#3be991] text-gray-800 font-medium mb-4">
+          <div className="inline-block rounded-full px-3 py-1 text-sm bg-[#3be991] text-gray-800 font-labrador mb-4">
             Contact Us
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#fe206b]">
+          <h2 className="text-5xl md:text-6xl font-kaleko mb-6 tracking-tight text-[#fe206b]">
             Let's work together
           </h2>
-          <p className="text-lg text-gray-600 text-balance">
+          <p className="text-lg text-gray-600 text-balance font-mairy">
             Have a project in mind? Get in touch and let's create something amazing together.
           </p>
         </AnimatedElement>
@@ -100,8 +100,8 @@ const Contact = () => {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-xl">Email Us</h4>
-                  <p className="text-gray-600">hello@digitalagency.com</p>
+                  <h4 className="font-kaleko text-xl">Email Us</h4>
+                  <p className="text-gray-600 font-mairy">hello@digitalagency.com</p>
                 </div>
               </div>
 
@@ -110,9 +110,9 @@ const Contact = () => {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-xl">Call Us</h4>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
-                  <p className="text-gray-600 mt-1 flex items-center gap-2">
+                  <h4 className="font-kaleko text-xl">Call Us</h4>
+                  <p className="text-gray-600 font-mairy">+1 (555) 123-4567</p>
+                  <p className="text-gray-600 mt-1 flex items-center gap-2 font-labrador">
                     <span>or WhatsApp</span>
                     <a 
                       href="https://w.app/BookCriativos" 
@@ -128,7 +128,7 @@ const Contact = () => {
               </div>
 
               <div className="p-6 rounded-xl bg-gradient-to-br from-[#ffb138]/10 to-[#3be991]/10">
-                <h3 className="text-2xl font-semibold mb-4 text-[#fe206b]">Our Process</h3>
+                <h3 className="text-2xl font-kaleko mb-4 text-[#fe206b]">Our Process</h3>
                 <div className="space-y-4">
                   {[
                     { step: "Discovery", desc: "We learn about your business goals and challenges" },
@@ -142,8 +142,8 @@ const Contact = () => {
                         idx % 3 === 1 ? "text-[#fe206b]" : "text-[#3be991]"
                       }`} />
                       <div>
-                        <div className="font-medium">{item.step}</div>
-                        <div className="text-sm text-gray-600">{item.desc}</div>
+                        <div className="font-kaleko">{item.step}</div>
+                        <div className="text-sm text-gray-600 font-mairy">{item.desc}</div>
                       </div>
                     </div>
                   ))}
@@ -154,10 +154,10 @@ const Contact = () => {
 
           <AnimatedElement direction="left">
             <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border-t-8 border-[#3be991]">
-              <h3 className="text-2xl font-semibold mb-6 text-[#fe206b]">Send us a message</h3>
+              <h3 className="text-2xl font-kaleko mb-6 text-[#fe206b]">Send us a message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  <label htmlFor="name" className="block text-sm font-labrador mb-2">
                     Name
                   </label>
                   <Input
@@ -167,12 +167,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full border-[#ffb138]/30 focus:border-[#ffb138] focus:ring-[#ffb138]"
+                    className="w-full border-[#ffb138]/30 focus:border-[#ffb138] focus:ring-[#ffb138] font-mairy"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  <label htmlFor="email" className="block text-sm font-labrador mb-2">
                     Email
                   </label>
                   <Input
@@ -183,12 +183,12 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full border-[#fe206b]/30 focus:border-[#fe206b] focus:ring-[#fe206b]"
+                    className="w-full border-[#fe206b]/30 focus:border-[#fe206b] focus:ring-[#fe206b] font-mairy"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                  <label htmlFor="phone" className="block text-sm font-labrador mb-2">
                     Phone Number
                   </label>
                   <Input
@@ -198,12 +198,12 @@ const Contact = () => {
                     placeholder="Your phone number"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full border-[#3be991]/30 focus:border-[#3be991] focus:ring-[#3be991]"
+                    className="w-full border-[#3be991]/30 focus:border-[#3be991] focus:ring-[#3be991] font-mairy"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label htmlFor="message" className="block text-sm font-labrador mb-2">
                     Message
                   </label>
                   <Textarea
@@ -213,13 +213,13 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full min-h-[150px] border-gray-200 focus:border-[#ffb138] focus:ring-[#ffb138]"
+                    className="w-full min-h-[150px] border-gray-200 focus:border-[#ffb138] focus:ring-[#ffb138] font-mairy"
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full rounded-full px-6 py-6 group bg-[#fe206b] hover:bg-[#fe206b]/90 text-white"
+                  className="w-full rounded-full px-6 py-6 group bg-[#fe206b] hover:bg-[#fe206b]/90 text-white font-labrador"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}

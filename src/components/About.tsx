@@ -1,3 +1,4 @@
+
 import AnimatedElement from "./AnimatedElement";
 import { Users, Calendar, Award } from "lucide-react";
 
@@ -18,61 +19,61 @@ const About = () => {
               
               <div className="absolute -bottom-6 -right-6 glass-card rounded-lg p-4 shadow-lg max-w-[250px] hidden md:block">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-[#0168ff]">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange">
                     <Award className="w-5 h-5" />
                   </div>
-                  <div className="font-semibold">Award-winning agency</div>
+                  <div className="font-kaleko">Award-winning agency</div>
                 </div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-600 font-mairy">
                   Recognized for excellence in digital innovation
                 </div>
               </div>
               
-              <div className="absolute -z-10 top-10 -left-10 w-full h-full rounded-2xl border border-gray-100 bg-gray-50 hidden md:block"></div>
-              <div className="absolute -z-20 top-20 -left-20 w-full h-full rounded-2xl border border-gray-100 bg-gray-50/50 hidden md:block"></div>
+              <div className="absolute -z-10 top-10 -left-10 w-full h-full rounded-2xl border border-gray-100 bg-brand-orange/5 hidden md:block"></div>
+              <div className="absolute -z-20 top-20 -left-20 w-full h-full rounded-2xl border border-gray-100 bg-brand-pink/5 hidden md:block"></div>
             </div>
           </AnimatedElement>
           
           <AnimatedElement direction="left">
             <div className="space-y-6">
-              <div className="inline-block rounded-full px-3 py-1 text-sm bg-gray-100 text-gray-800 font-medium">
+              <div className="inline-block rounded-full px-3 py-1 text-sm bg-brand-orange/20 text-gray-800 font-labrador">
                 About Us
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-kaleko tracking-tight text-brand-orange">
                 We create digital experiences that people love
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 font-mairy">
                 Founded in 2015, we're a team of designers, developers, and strategists passionate about creating exceptional digital solutions that help businesses grow and succeed.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-[#0168ff]" />
-                    <span className="font-semibold">30+</span>
+                    <Users className="w-5 h-5 text-brand-pink" />
+                    <span className="font-kaleko text-brand-pink">30+</span>
                   </div>
-                  <p className="text-sm text-gray-600">Talented experts</p>
+                  <p className="text-sm text-gray-600 font-mairy">Talented experts</p>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-[#0168ff]" />
-                    <span className="font-semibold">8+</span>
+                    <Calendar className="w-5 h-5 text-brand-orange" />
+                    <span className="font-kaleko text-brand-orange">8+</span>
                   </div>
-                  <p className="text-sm text-gray-600">Years of experience</p>
+                  <p className="text-sm text-gray-600 font-mairy">Years of experience</p>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <Award className="w-5 h-5 text-[#0168ff]" />
-                    <span className="font-semibold">20+</span>
+                    <Award className="w-5 h-5 text-brand-green" />
+                    <span className="font-kaleko text-brand-green">20+</span>
                   </div>
-                  <p className="text-sm text-gray-600">Industry awards</p>
+                  <p className="text-sm text-gray-600 font-mairy">Industry awards</p>
                 </div>
               </div>
               
               <div className="space-y-4 pt-2">
-                <p className="text-gray-600">
+                <p className="text-gray-600 font-labrador">
                   Our mission is to help businesses transform their digital presence through innovative design, strategic thinking, and technical excellence. We believe in creating meaningful experiences that connect brands with their audiences.
                 </p>
               </div>

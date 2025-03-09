@@ -1,5 +1,28 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Custom fonts - Make sure you have licenses for these fonts before using in production */
+@font-face {
+  font-family: 'Kaleko 205 Heavy';
+  src: url('/fonts/Kaleko205Heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Labrador B Bold';
+  src: url('/fonts/LabradorB-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mairy Light Italic';
+  src: url('/fonts/Mairy-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -173,4 +196,18 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+}
+
+/* Additional utility classes for our new fonts */
+.font-kaleko {
+  font-family: 'Kaleko 205 Heavy', sans-serif;
+}
+
+.font-labrador {
+  font-family: 'Labrador B Bold', serif;
+}
+
+.font-mairy {
+  font-family: 'Mairy Light Italic', serif;
+  font-style: italic;
 }

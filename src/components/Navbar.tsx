@@ -63,8 +63,8 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#home" className="text-2xl font-semibold z-50">
-          agency<span className="text-[#0168ff]">.</span>
+        <a href="#home" className="text-2xl font-kaleko z-50">
+          agency<span className="text-brand-pink">.</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -77,14 +77,14 @@ const Navbar = () => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
               }}
-              className="text-sm font-medium transition-colors hover:text-[#0168ff]"
+              className="text-sm font-labrador transition-colors hover:text-brand-green"
             >
               {item.label}
             </a>
           ))}
           <Button 
             size="sm" 
-            className="rounded-full px-6 bg-[#0168ff] hover:bg-blue-700"
+            className="rounded-full px-6 bg-brand-pink hover:bg-brand-pink/90 font-labrador"
             onClick={(e) => {
               e.preventDefault();
               handleNavLinkClick("#contact");
@@ -100,11 +100,11 @@ const Navbar = () => {
           className="md:hidden flex items-center z-50"
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={24} className="text-brand-pink" /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Navigation - Increasing opacity from 80% to 95% */}
+      {/* Mobile Navigation */}
       <div
         className={cn(
           "fixed inset-0 bg-white/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
@@ -116,7 +116,7 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-xl font-medium transition-colors hover:text-[#0168ff]"
+              className="text-xl font-labrador transition-colors hover:text-brand-green"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
@@ -127,7 +127,7 @@ const Navbar = () => {
           ))}
           <Button 
             size="lg" 
-            className="rounded-full mt-4 px-8 bg-[#0168ff] hover:bg-blue-700"
+            className="rounded-full mt-4 px-8 bg-brand-pink hover:bg-brand-pink/90 font-labrador"
             onClick={(e) => {
               e.preventDefault();
               handleNavLinkClick("#contact");
