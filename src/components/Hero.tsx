@@ -21,7 +21,7 @@ const Hero = () => {
       }, 100);
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-[0067FF]">
+  return <section id="home" className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-[0067FF] bg-[#0067ff]">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl opacity-40"></div>
