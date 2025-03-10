@@ -58,8 +58,8 @@ const About = () => {
                 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <Award className="w-5 h-5 text-brand-green" />
-                    <span className="font-kaleko text-brand-green">20+</span>
+                    <Award className="w-5 h-5 text-brand-pink" />
+                    <span className="font-kaleko text-brand-pink">20+</span>
                   </div>
                   <p className="text-sm text-gray-600 font-mairy">Industry awards</p>
                 </div>
