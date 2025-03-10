@@ -94,7 +94,8 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <AnimatedElement direction="right">
-            <div className="space-y-8 p-6 md:p-8 bg-white rounded-2xl shadow-xl">
+            {/* Fixed height card for the left side */}
+            <div className="space-y-8 p-6 md:p-8 bg-white rounded-2xl shadow-xl h-full flex flex-col">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-[#ffb138]/20 flex items-center justify-center text-[#ffb138] flex-shrink-0">
                   <Mail className="w-6 h-6" />
@@ -127,7 +128,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl bg-gradient-to-br from-[#ffb138]/10 to-[#3be991]/10">
+              <div className="p-6 rounded-xl bg-gradient-to-br from-[#ffb138]/10 to-[#3be991]/10 flex-grow">
                 <h3 className="text-2xl font-kaleko mb-4 text-[#fe206b]">Our Process</h3>
                 <div className="space-y-4">
                   {[
@@ -153,9 +154,10 @@ const Contact = () => {
           </AnimatedElement>
 
           <AnimatedElement direction="left">
-            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border-t-8 border-[#3be991]">
+            {/* Fixed height card for the right side */}
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border-t-8 border-[#3be991] h-full flex flex-col">
               <h3 className="text-2xl font-kaleko mb-6 text-[#fe206b]">Send us a message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 flex-grow flex flex-col">
                 <div>
                   <label htmlFor="name" className="block text-sm font-labrador mb-2">
                     Name
@@ -202,7 +204,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <div>
+                <div className="flex-grow">
                   <label htmlFor="message" className="block text-sm font-labrador mb-2">
                     Message
                   </label>
@@ -213,13 +215,13 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full min-h-[150px] border-gray-200 focus:border-[#ffb138] focus:ring-[#ffb138] font-mairy"
+                    className="w-full min-h-[150px] flex-grow border-gray-200 focus:border-[#ffb138] focus:ring-[#ffb138] font-mairy"
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full rounded-full px-6 py-6 group bg-[#fe206b] hover:bg-[#fe206b]/90 text-white font-labrador"
+                  className="w-full rounded-full px-6 py-6 group bg-[#fe206b] hover:bg-[#fe206b]/90 text-white font-labrador mt-auto"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}

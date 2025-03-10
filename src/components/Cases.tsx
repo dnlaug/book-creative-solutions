@@ -4,26 +4,53 @@ import AnimatedElement from "./AnimatedElement";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, ArrowRight as RightArrow, Quote } from "lucide-react";
 
+// Updated projects with categories for filtering
 const projects = [
   {
     title: "E-commerce Redesign",
-    category: "UI/UX & Development",
+    category: "Digital",
+    tags: ["web", "ui/ux", "development"],
     image: "https://images.unsplash.com/photo-1523475496115-395d03d7dc72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1399&q=80",
     delay: 0,
   },
   {
     title: "Financial App",
-    category: "Mobile Development",
+    category: "Mobile",
+    tags: ["mobile", "development", "fintech"],
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
     delay: 150,
   },
   {
     title: "Educational Platform",
-    category: "Web Development",
+    category: "Digital",
+    tags: ["web", "education", "development"],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
     delay: 300,
   },
+  {
+    title: "Branding Campaign",
+    category: "Brand",
+    tags: ["branding", "design", "marketing"],
+    image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    delay: 450,
+  },
+  {
+    title: "Product Launch Video",
+    category: "Audio & Video",
+    tags: ["video", "production", "marketing"],
+    image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    delay: 600,
+  },
+  {
+    title: "Marketing Strategy",
+    category: "Strategy",
+    tags: ["strategy", "marketing", "consulting"],
+    image: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    delay: 750,
+  },
 ];
+
+const categories = ["All", "Brand", "Digital", "Mobile", "Strategy", "Audio & Video"];
 
 const testimonials = [
   {
@@ -55,6 +82,9 @@ const testimonials = [
 const Cases = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [isFiltering, setIsFiltering] = useState(false);
 
   const nextTestimonial = () => {
     if (isAnimating) return;
@@ -77,6 +107,18 @@ const Cases = () => {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
+  useEffect(() => {
+    setIsFiltering(true);
+    setTimeout(() => {
+      if (activeCategory === "All") {
+        setFilteredProjects(projects);
+      } else {
+        setFilteredProjects(projects.filter(project => project.category === activeCategory));
+      }
+      setIsFiltering(false);
+    }, 300);
+  }, [activeCategory]);
+
   return (
     <section id="cases" className="section bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
@@ -92,13 +134,35 @@ const Cases = () => {
           </p>
         </AnimatedElement>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <AnimatedElement
+        {/* Category filters */}
+        <AnimatedElement direction="up" className="flex flex-wrap justify-center gap-2 mb-12">
+          {categories.map((category, index) => (
+            <button
               key={index}
+              onClick={() => setActiveCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                activeCategory === category
+                  ? "bg-brand-pink text-white shadow-md"
+                  : "bg-white hover:bg-gray-100 text-gray-600"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </AnimatedElement>
+
+        {/* Projects grid */}
+        <div 
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-300 ${
+            isFiltering ? "opacity-50" : "opacity-100"
+          }`}
+        >
+          {filteredProjects.map((project, index) => (
+            <AnimatedElement
+              key={project.title}
               direction="up"
               delay={project.delay}
-              className="group"
+              className="group portfolio-item"
             >
               <div className="relative overflow-hidden rounded-xl hover-shadow">
                 <div className="aspect-[4/3] overflow-hidden">
@@ -108,18 +172,25 @@ const Cases = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <span className="text-sm font-labrador text-brand-green">
+                <div className="portfolio-overlay">
+                  <span className="text-sm font-medium text-brand-green">
                     {project.category}
                   </span>
-                  <h3 className="text-xl font-kaleko text-white mt-1">
+                  <h3 className="text-xl font-bold text-white mt-1">
                     {project.title}
                   </h3>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="inline-block bg-white/20 text-white text-xs px-2 py-1 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                   <div className="flex items-start mt-3">
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-0 group/btn font-mairy"
+                      className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-0 group/btn"
                     >
                       View Project
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
@@ -131,8 +202,14 @@ const Cases = () => {
           ))}
         </div>
 
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-16">
+            <p className="text-lg text-gray-500">No projects found in this category.</p>
+          </div>
+        )}
+
         <AnimatedElement direction="up" delay={450} className="mt-16 text-center">
-          <Button variant="outline" size="lg" className="rounded-full px-8 group font-labrador border-brand-pink text-brand-pink hover:bg-brand-pink/10">
+          <Button variant="outline" size="lg" className="rounded-full px-8 group border-brand-pink text-brand-pink hover:bg-brand-pink/10">
             View All Work
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
