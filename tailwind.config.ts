@@ -76,7 +76,6 @@ export default {
 			      green: '#3be991',
 			      navy: '#1A2238',
 			    }
-			  }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
