@@ -63,7 +63,7 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#home" className="text-3xl font-kaleko z-50">
+        <a href="#home" className="text-2xl font-kaleko z-50">
           agency<span className="text-brand-pink">.</span>
         </a>
 
@@ -77,14 +77,14 @@ const Navbar = () => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
               }}
-              className="text-md font-labrador transition-colors hover:text-brand-green"
+              className="text-sm font-labrador transition-colors hover:text-brand-green"
             >
               {item.label}
             </a>
           ))}
           <Button 
-            size="lg" 
-            className="rounded-full px-6 text-md bg-brand-pink hover:bg-brand-pink/90 font-labrador"
+            size="sm" 
+            className="rounded-full px-6 bg-brand-pink hover:bg-brand-pink/90 font-labrador"
             onClick={(e) => {
               e.preventDefault();
               handleNavLinkClick("#contact");
@@ -100,7 +100,7 @@ const Navbar = () => {
           className="md:hidden flex items-center z-50"
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={28} className="text-brand-pink" /> : <Menu size={28} />}
+          {isOpen ? <X size={24} className="text-brand-pink" /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -116,7 +116,7 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-2xl font-labrador transition-colors hover:text-brand-green"
+              className="text-xl font-labrador transition-colors hover:text-brand-green"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
@@ -127,7 +127,7 @@ const Navbar = () => {
           ))}
           <Button 
             size="lg" 
-            className="rounded-full mt-4 px-8 py-6 text-xl bg-brand-pink hover:bg-brand-pink/90 font-labrador"
+            className="rounded-full mt-4 px-8 bg-brand-pink hover:bg-brand-pink/90 font-labrador"
             onClick={(e) => {
               e.preventDefault();
               handleNavLinkClick("#contact");
