@@ -123,24 +123,24 @@ const Cases = () => {
     <section id="cases" className="section bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedElement direction="up" className="text-center mb-16 max-w-2xl mx-auto">
-          <div className="inline-block rounded-full px-3 py-1 text-md bg-brand-pink/20 text-gray-800 font-labrador mb-4">
+          <div className="inline-block rounded-full px-3 py-1 text-sm bg-brand-pink/20 text-gray-800 font-labrador mb-4">
             Our Work
           </div>
-          <h2 className="text-4xl md:text-5xl font-kaleko mb-4 tracking-tight text-brand-pink">
+          <h2 className="text-3xl md:text-4xl font-kaleko mb-4 tracking-tight text-brand-pink">
             Featured projects
           </h2>
-          <p className="text-xl text-gray-600 text-balance font-mairy">
+          <p className="text-lg text-gray-600 text-balance font-mairy">
             Explore our portfolio of successful projects that have helped our clients achieve their goals.
           </p>
         </AnimatedElement>
 
-        {/* Category filters - updated with font-kaleko to match heading */}
-        <AnimatedElement direction="up" className="flex flex-wrap justify-center gap-3 mb-12">
+        {/* Category filters */}
+        <AnimatedElement direction="up" className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category, index) => (
             <button
               key={index}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-3 rounded-full text-md font-kaleko transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category
                   ? "bg-brand-pink text-white shadow-md"
                   : "bg-white hover:bg-gray-100 text-gray-600"
@@ -173,27 +173,27 @@ const Cases = () => {
                   />
                 </div>
                 <div className="portfolio-overlay">
-                  <span className="text-md font-medium text-brand-green">
+                  <span className="text-sm font-medium text-brand-green">
                     {project.category}
                   </span>
-                  <h3 className="text-2xl font-bold text-white mt-2">
+                  <h3 className="text-xl font-bold text-white mt-1">
                     {project.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="inline-block bg-white/20 text-white text-sm px-3 py-1 rounded-full">
+                      <span key={tagIndex} className="inline-block bg-white/20 text-white text-xs px-2 py-1 rounded-full">
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-start mt-4">
+                  <div className="flex items-start mt-3">
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-0 group/btn text-md"
+                      className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-0 group/btn"
                     >
                       View Project
-                      <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </Button>
                   </div>
                 </div>
@@ -204,24 +204,24 @@ const Cases = () => {
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-xl text-gray-500">No projects found in this category.</p>
+            <p className="text-lg text-gray-500">No projects found in this category.</p>
           </div>
         )}
 
         <AnimatedElement direction="up" delay={450} className="mt-16 text-center">
-          <Button variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg group border-brand-pink text-brand-pink hover:bg-brand-pink/10 font-kaleko">
+          <Button variant="outline" size="lg" className="rounded-full px-8 group border-brand-pink text-brand-pink hover:bg-brand-pink/10">
             View All Work
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </AnimatedElement>
 
         <AnimatedElement direction="up" delay={600} className="mt-24">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border-t-4 border-brand-orange">
             <div className="text-center mb-10">
-              <h3 className="text-3xl md:text-4xl font-kaleko tracking-tight mb-4 text-brand-orange">
+              <h3 className="text-2xl md:text-3xl font-kaleko tracking-tight mb-4 text-brand-orange">
                 What our clients say about us
               </h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto font-mairy">
+              <p className="text-gray-600 max-w-2xl mx-auto font-mairy">
                 We're proud of the relationships we've built and the impact we've made for our clients.
               </p>
             </div>
@@ -234,11 +234,11 @@ const Cases = () => {
                 >
                   <div className="relative p-8 md:p-10 bg-gray-50 rounded-2xl border border-gray-100">
                     <div className="absolute top-6 left-6 text-brand-green/20">
-                      <Quote size={64} className="rotate-180" />
+                      <Quote size={48} className="rotate-180" />
                     </div>
                     
                     <div className="relative z-10">
-                      <p className="text-xl md:text-2xl text-gray-700 font-mairy mb-8">
+                      <p className="text-lg md:text-xl text-gray-700 font-mairy mb-8">
                         {testimonials[currentIndex].content}
                       </p>
                       
@@ -246,11 +246,11 @@ const Cases = () => {
                         <img 
                           src={testimonials[currentIndex].image} 
                           alt={testimonials[currentIndex].author}
-                          className="w-14 h-14 rounded-full object-cover"
+                          className="w-12 h-12 rounded-full object-cover"
                         />
                         <div>
-                          <div className="font-kaleko text-xl">{testimonials[currentIndex].author}</div>
-                          <div className="text-md text-gray-500 font-labrador">{testimonials[currentIndex].position}</div>
+                          <div className="font-kaleko">{testimonials[currentIndex].author}</div>
+                          <div className="text-sm text-gray-500 font-labrador">{testimonials[currentIndex].position}</div>
                         </div>
                       </div>
                     </div>
@@ -263,7 +263,7 @@ const Cases = () => {
                   <button
                     key={idx}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`w-3 h-3 rounded-full transition-all ${
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${
                       currentIndex === idx ? 'bg-brand-pink scale-125' : 'bg-gray-300'
                     }`}
                     aria-label={`Go to testimonial ${idx + 1}`}
@@ -274,20 +274,20 @@ const Cases = () => {
               <div className="absolute top-1/2 -translate-y-1/2 left-0 -ml-4 md:-ml-6">
                 <button
                   onClick={prevTestimonial}
-                  className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-brand-pink hover:text-white transition-colors"
+                  className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-brand-pink hover:text-white transition-colors"
                   aria-label="Previous testimonial"
                 >
-                  <ArrowLeft size={20} />
+                  <ArrowLeft size={18} />
                 </button>
               </div>
               
               <div className="absolute top-1/2 -translate-y-1/2 right-0 -mr-4 md:-mr-6">
                 <button
                   onClick={nextTestimonial}
-                  className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-brand-pink hover:text-white transition-colors"
+                  className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-brand-pink hover:text-white transition-colors"
                   aria-label="Next testimonial"
                 >
-                  <RightArrow size={20} />
+                  <RightArrow size={18} />
                 </button>
               </div>
             </div>

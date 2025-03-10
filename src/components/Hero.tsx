@@ -37,14 +37,14 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6 md:space-y-8">
             <AnimatedElement className="space-y-4" direction="up">
-              <div className="inline-block rounded-full px-3 py-1 text-md bg-gray-100 text-gray-800 font-labrador">
+              <div className="inline-block rounded-full px-3 py-1 text-sm bg-gray-100 text-gray-800 font-labrador">
                 Digital Agency
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-kaleko leading-tight tracking-tighter text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kaleko leading-tight tracking-tighter text-balance">
                 We craft digital experiences that{" "}
                 <span className="text-brand-pink">matter</span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-lg text-balance font-mairy">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-lg text-balance font-mairy">
                 We transform your ideas into exceptional digital products through strategic thinking and creative design.
               </p>
             </AnimatedElement>
@@ -53,16 +53,16 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="rounded-full px-8 py-6 text-lg group bg-brand-pink hover:bg-brand-pink/90 font-labrador"
+                  className="rounded-full px-6 group bg-brand-pink hover:bg-brand-pink/90 font-labrador"
                   onClick={() => handleButtonClick("#contact")}
                 >
                   Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="rounded-full px-8 py-6 text-lg font-labrador border-brand-orange text-brand-orange hover:bg-brand-orange/10"
+                  className="rounded-full px-6 font-labrador border-brand-orange text-brand-orange hover:bg-brand-orange/10"
                   onClick={() => handleButtonClick("#cases")}
                 >
                   Our Work
@@ -77,15 +77,15 @@ const Hero = () => {
                     <div
                       key={i}
                       className={cn(
-                        "w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white",
+                        "w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white",
                         `bg-gray-${i * 100}`
                       )}
                     ></div>
                   ))}
                 </div>
                 <div>
-                  <div className="font-kaleko text-xl">150+</div>
-                  <div className="text-md text-gray-500 font-mairy">Satisfied clients</div>
+                  <div className="font-kaleko">150+</div>
+                  <div className="text-sm text-gray-500 font-mairy">Satisfied clients</div>
                 </div>
               </div>
             </AnimatedElement>
@@ -130,7 +130,7 @@ const Hero = () => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce w-10 h-10 flex items-center justify-center"
         aria-label="Scroll Down"
       >
-        <ChevronDown size={28} className="text-brand-orange" />
+        <ChevronDown size={24} className="text-brand-orange" />
       </button>
     </section>
   );
