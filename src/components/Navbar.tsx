@@ -11,14 +11,17 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Cases", href: "#cases" },
+  { label: "About Us", href: "#about" },
+  { label: "Our Team", href: "#team" },
+  { label: "Our Solutions", href: "#services" },
+  { label: "Portfolio", href: "#cases" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -26,6 +29,20 @@ const Navbar = () => {
     const handleScroll = () => {
       const offset = window.scrollY;
       setScrolled(offset > 50);
+      
+      // Update active section based on scroll position
+      const sections = navItems.map(item => item.href);
+      
+      for (const section of sections) {
+        const element = document.querySelector(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -58,17 +75,18 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6 md:px-10",
         scrolled
-          ? "bg-white/80 shadow-sm backdrop-blur-card"
+          ? "bg-white/95 shadow-sm backdrop-blur-card"
           : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#home" className="text-2xl font-kaleko z-50">
-          agency<span className="text-brand-pink">.</span>
+        <a href="#home" className="text-2xl font-kaleko z-50 flex items-center gap-2">
+          <span className="text-brand-pink">Book</span>
+          <span className="text-brand-green text-3xl">&#x2764;</span> {/* Green heart character as placeholder - replace with actual mascot */}
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -77,14 +95,17 @@ const Navbar = () => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
               }}
-              className="text-sm font-labrador transition-colors hover:text-brand-green"
+              className={cn(
+                "nav-link text-sm font-medium transition-colors hover:text-brand-pink",
+                activeSection === item.href ? "text-brand-pink active" : "text-brand-navy"
+              )}
             >
               {item.label}
             </a>
           ))}
           <Button 
             size="sm" 
-            className="rounded-full px-6 bg-brand-pink hover:bg-brand-pink/90 font-labrador"
+            className="rounded-lg bg-brand-pink hover:bg-brand-pink/90 text-white shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
             onClick={(e) => {
               e.preventDefault();
               handleNavLinkClick("#contact");
@@ -111,12 +132,15 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <nav className="flex flex-col items-center space-y-8">
+        <nav className="flex flex-col items-center space-y-6">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-xl font-labrador transition-colors hover:text-brand-green"
+              className={cn(
+                "text-xl font-medium transition-colors hover:text-brand-pink",
+                activeSection === item.href ? "text-brand-pink" : "text-brand-navy"
+              )}
               onClick={(e) => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
@@ -127,7 +151,7 @@ const Navbar = () => {
           ))}
           <Button 
             size="lg" 
-            className="rounded-full mt-4 px-8 bg-brand-pink hover:bg-brand-pink/90 font-labrador"
+            className="rounded-lg mt-4 bg-brand-pink hover:bg-brand-pink/90 text-white shadow-md"
             onClick={(e) => {
               e.preventDefault();
               handleNavLinkClick("#contact");

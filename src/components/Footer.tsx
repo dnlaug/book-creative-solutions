@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { 
   Facebook, Twitter, Instagram, Linkedin, 
-  ArrowUp, Mail, MapPin, Phone
+  ArrowUp, ChevronRight
 } from "lucide-react";
 
 const Footer = () => {
@@ -13,15 +13,16 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white pt-20 pb-6">
+    <footer className="bg-brand-navy text-white pt-16 pb-6">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="text-2xl font-kaleko mb-6">
-              agency<span className="text-brand-pink">.</span>
+            <div className="text-2xl font-black mb-6 flex items-center gap-2">
+              <span className="text-brand-pink">Book</span>
+              <span className="text-brand-green text-3xl">&#x2764;</span> {/* Green character placeholder */}
             </div>
-            <p className="text-gray-400 mb-6 max-w-xs font-mairy">
-              We create digital experiences that inspire and drive meaningful connections.
+            <p className="text-gray-400 mb-6 max-w-xs">
+              We create digital experiences that inspire and drive meaningful connections between brands and their audiences.
             </p>
             <div className="flex space-x-4">
               <SocialIcon icon={<Facebook size={18} />} />
@@ -32,12 +33,14 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-kaleko mb-6 text-brand-orange">Company</h3>
-            <ul className="space-y-4">
+            <h3 className="text-lg font-bold mb-6 text-brand-green">Quick Links</h3>
+            <ul className="space-y-3">
               {[
+                { name: "Home", link: "#home" },
                 { name: "About Us", link: "#about" },
-                { name: "Our Work", link: "#cases" },
-                { name: "Services", link: "#services" },
+                { name: "Our Team", link: "#team" },
+                { name: "Our Solutions", link: "#services" },
+                { name: "Portfolio", link: "#cases" },
                 { name: "Contact Us", link: "#contact" }
               ].map((item, index) => (
                 <FooterLink key={index} href={item.link}>{item.name}</FooterLink>
@@ -46,29 +49,43 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-kaleko mb-6 text-brand-green">Contact</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-gray-400 font-mairy">
-                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-brand-pink" />
-                <span>123 Creative St, Design City, DC 10101</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-400 font-mairy">
-                <Phone size={18} className="flex-shrink-0 text-brand-orange" />
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-400 font-mairy">
-                <Mail size={18} className="flex-shrink-0 text-brand-green" />
-                <span>hello@agencywebsite.com</span>
-              </li>
+            <h3 className="text-lg font-bold mb-6 text-brand-green">Services</h3>
+            <ul className="space-y-3">
+              {[
+                { name: "Brand Strategy", link: "#services" },
+                { name: "Web Development", link: "#services" },
+                { name: "Digital Marketing", link: "#services" },
+                { name: "Social Media", link: "#services" },
+                { name: "Video Production", link: "#services" }
+              ].map((item, index) => (
+                <FooterLink key={index} href={item.link}>{item.name}</FooterLink>
+              ))}
             </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-brand-green">Newsletter</h3>
+            <p className="text-gray-400 mb-4">
+              Subscribe to our newsletter for the latest updates and insights.
+            </p>
+            <div className="flex">
+              <input 
+                type="email" 
+                placeholder="Your email" 
+                className="bg-gray-800 border-0 rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-pink w-full"
+              />
+              <button className="bg-brand-pink text-white px-4 py-2 rounded-r-lg hover:bg-brand-pink/90 transition-colors">
+                <ChevronRight size={20} />
+              </button>
+            </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-6 mt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm mb-4 md:mb-0 font-labrador">
-            © {currentYear} Agency. All rights reserved.
+          <div className="text-gray-400 text-sm mb-4 md:mb-0">
+            © {currentYear} Book Agency. All rights reserved.
           </div>
-          <div className="flex space-x-6 text-sm text-gray-400 font-mairy">
+          <div className="flex space-x-6 text-sm text-gray-400">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
@@ -115,13 +132,12 @@ const FooterLink = ({
     <a 
       href={href} 
       className={cn(
-        "text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group font-labrador",
+        "text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group",
         className
       )}
     >
-      <span className="group-hover:translate-x-1 transition-transform">
-        {children}
-      </span>
+      <ChevronRight size={16} className="text-brand-pink opacity-0 group-hover:opacity-100 transition-opacity" />
+      <span>{children}</span>
     </a>
   </li>
 );
