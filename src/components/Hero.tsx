@@ -38,9 +38,9 @@ const Hero = () => {
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kaleko leading-tight tracking-tighter text-balance">
                 We craft digital experiences that{" "}
-                <span className="text-brand-pink">matter</span>
+                <span className="text-brand-orange">matter</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-lg text-balance font-mairy">
+              <p className="text-base sm:text-lg md:text-xl max-w-lg text-balance font-mairy text-slate-50">
                 We transform your ideas into exceptional digital products through strategic thinking and creative design.
               </p>
             </AnimatedElement>
@@ -51,7 +51,7 @@ const Hero = () => {
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full px-6 font-labrador border-brand-orange text-brand-orange hover:bg-brand-orange/10" onClick={() => handleButtonClick("#cases")}>
+                <Button variant="outline" size="lg" onClick={() => handleButtonClick("#cases")} className="rounded-full px-6 font-labrador border-brand-orange bg-brand-orange text-[#f3f3f3]">
                   Our Work
                 </Button>
               </div>
