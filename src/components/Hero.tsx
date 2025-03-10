@@ -1,31 +1,27 @@
-
 import { Button } from "@/components/ui/button";
 import AnimatedElement from "./AnimatedElement";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ChevronDown } from "lucide-react";
-
 const Hero = () => {
   const scrollToNext = () => {
     const servicesSection = document.getElementById("services");
     if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: "smooth" });
+      servicesSection.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
   const handleButtonClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       setTimeout(() => {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({
+          behavior: "smooth"
+        });
       }, 100);
     }
   };
-
-  return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden"
-    >
+  return <section id="home" className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-[0067FF] bg-[#0067ff]">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl opacity-40"></div>
@@ -42,29 +38,20 @@ const Hero = () => {
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kaleko leading-tight tracking-tighter text-balance">
                 We craft digital experiences that{" "}
-                <span className="text-brand-pink">matter</span>
+                <span className="text-brand-orange">matter</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-lg text-balance font-mairy">
+              <p className="text-base sm:text-lg md:text-xl max-w-lg text-balance font-mairy text-slate-50">
                 We transform your ideas into exceptional digital products through strategic thinking and creative design.
               </p>
             </AnimatedElement>
 
             <AnimatedElement delay={200} direction="up">
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="rounded-full px-6 group bg-brand-pink hover:bg-brand-pink/90 font-labrador"
-                  onClick={() => handleButtonClick("#contact")}
-                >
+                <Button size="lg" onClick={() => handleButtonClick("#contact")} className="rounded-full px-6 group font-labrador bg-brand-orange">
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="rounded-full px-6 font-labrador border-brand-orange text-brand-orange hover:bg-brand-orange/10"
-                  onClick={() => handleButtonClick("#cases")}
-                >
+                <Button variant="outline" size="lg" onClick={() => handleButtonClick("#cases")} className="rounded-full px-6 font-labrador border-brand-orange bg-brand-orange text-[#f3f3f3]">
                   Our Work
                 </Button>
               </div>
@@ -73,15 +60,7 @@ const Hero = () => {
             <AnimatedElement delay={400} direction="up">
               <div className="flex items-center gap-6 pt-4 md:pt-6">
                 <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className={cn(
-                        "w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white",
-                        `bg-gray-${i * 100}`
-                      )}
-                    ></div>
-                  ))}
+                  {[1, 2, 3, 4].map(i => <div key={i} className={cn("w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white", `bg-gray-${i * 100}`)}></div>)}
                 </div>
                 <div>
                   <div className="font-kaleko">150+</div>
@@ -91,20 +70,11 @@ const Hero = () => {
             </AnimatedElement>
           </div>
 
-          <AnimatedElement
-            className="relative order-first lg:order-last"
-            direction="left"
-            delay={300}
-          >
+          <AnimatedElement className="relative order-first lg:order-last" direction="left" delay={300}>
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="absolute inset-0 bg-gradient-to-br from-brand-green/20 to-brand-orange/20 rounded-2xl transform rotate-3 scale-105"></div>
               <div className="relative bg-white p-2 rounded-2xl shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Digital Agency Team"
-                  className="w-full h-auto rounded-xl object-cover"
-                  loading="eager"
-                />
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Digital Agency Team" className="w-full h-auto rounded-xl object-cover" loading="eager" />
               </div>
 
               <div className="absolute -bottom-6 -left-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float hidden sm:block">
@@ -125,15 +95,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <button
-        onClick={scrollToNext}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce w-10 h-10 flex items-center justify-center"
-        aria-label="Scroll Down"
-      >
+      <button onClick={scrollToNext} className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce w-10 h-10 flex items-center justify-center" aria-label="Scroll Down">
         <ChevronDown size={24} className="text-brand-orange" />
       </button>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
