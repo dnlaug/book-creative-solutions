@@ -21,7 +21,7 @@ const Hero = () => {
       }, 100);
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-[0067FF] bg-[#0067ff]">
+  return <section id="home" className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-[0067FF]">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl opacity-40"></div>
@@ -38,9 +38,9 @@ const Hero = () => {
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kaleko leading-tight tracking-tighter text-balance">
                 We craft digital experiences that{" "}
-                <span className="text-brand-orange">matter</span>
+                <span className="text-brand-pink">matter</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl max-w-lg text-balance font-mairy text-slate-50">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-lg text-balance font-mairy">
                 We transform your ideas into exceptional digital products through strategic thinking and creative design.
               </p>
             </AnimatedElement>
@@ -51,7 +51,7 @@ const Hero = () => {
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => handleButtonClick("#cases")} className="rounded-full px-6 font-labrador border-brand-orange bg-brand-orange text-[#f3f3f3]">
+                <Button variant="outline" size="lg" className="rounded-full px-6 font-labrador border-brand-orange text-brand-orange hover:bg-brand-orange/10" onClick={() => handleButtonClick("#cases")}>
                   Our Work
                 </Button>
               </div>

@@ -1,21 +1,26 @@
+
 import { cn } from "@/lib/utils";
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp, Mail, MapPin, Phone } from "lucide-react";
+import { 
+  Facebook, Twitter, Instagram, Linkedin, 
+  ArrowUp, Mail, MapPin, Phone
+} from "lucide-react";
+
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-gray-900 text-white pt-20 pb-6">
+
+  return (
+    <footer className="bg-gray-900 text-white pt-20 pb-6">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="text-2xl font-kaleko mb-6">
               agency<span className="text-brand-pink">.</span>
             </div>
-            <p className="mb-6 max-w-xs font-mairy text-slate-50">
+            <p className="text-gray-400 mb-6 max-w-xs font-mairy">
               We create digital experiences that inspire and drive meaningful connections.
             </p>
             <div className="flex space-x-4">
@@ -29,19 +34,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-kaleko mb-6 text-brand-orange">Company</h3>
             <ul className="space-y-4">
-              {[{
-              name: "About Us",
-              link: "#about"
-            }, {
-              name: "Our Work",
-              link: "#cases"
-            }, {
-              name: "Services",
-              link: "#services"
-            }, {
-              name: "Contact Us",
-              link: "#contact"
-            }].map((item, index) => <FooterLink key={index} href={item.link}>{item.name}</FooterLink>)}
+              {[
+                { name: "About Us", link: "#about" },
+                { name: "Our Work", link: "#cases" },
+                { name: "Services", link: "#services" },
+                { name: "Contact Us", link: "#contact" }
+              ].map((item, index) => (
+                <FooterLink key={index} href={item.link}>{item.name}</FooterLink>
+              ))}
             </ul>
           </div>
 
@@ -50,15 +50,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400 font-mairy">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0 text-brand-pink" />
-                <span className="text-slate-50">123 Creative St, Design City, DC 10101</span>
+                <span>123 Creative St, Design City, DC 10101</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 font-mairy">
                 <Phone size={18} className="flex-shrink-0 text-brand-orange" />
-                <span className="text-slate-50">+1 (555) 123-4567</span>
+                <span>+1 (555) 123-4567</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 font-mairy">
                 <Mail size={18} className="flex-shrink-0 text-brand-green" />
-                <span className="text-slate-50">hello@agencywebsite.com</span>
+                <span>hello@agencywebsite.com</span>
               </li>
             </ul>
           </div>
@@ -68,35 +68,62 @@ const Footer = () => {
           <div className="text-gray-400 text-sm mb-4 md:mb-0 font-labrador">
             © {currentYear} Agency. All rights reserved.
           </div>
-          
+          <div className="flex space-x-6 text-sm text-gray-400 font-mairy">
+            <a href="#" className="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Cookie Policy
+            </a>
+          </div>
         </div>
       </div>
 
-      <button onClick={scrollToTop} className="fixed bottom-6 right-6 bg-brand-pink hover:bg-brand-pink/90 w-10 h-10 rounded-full flex items-center justify-center transition-colors z-10" aria-label="Back to top">
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 bg-brand-pink hover:bg-brand-pink/90 w-10 h-10 rounded-full flex items-center justify-center transition-colors z-10"
+        aria-label="Back to top"
+      >
         <ArrowUp size={20} />
       </button>
-    </footer>;
+    </footer>
+  );
 };
-const SocialIcon = ({
-  icon
-}: {
-  icon: React.ReactNode;
-}) => <a href="#" className="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-pink flex items-center justify-center transition-colors">
+
+const SocialIcon = ({ icon }: { icon: React.ReactNode }) => (
+  <a
+    href="#"
+    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-pink flex items-center justify-center transition-colors"
+  >
     {icon}
-  </a>;
-const FooterLink = ({
-  children,
+  </a>
+);
+
+const FooterLink = ({ 
+  children, 
   href,
   className
-}: {
-  children: React.ReactNode;
+}: { 
+  children: React.ReactNode; 
   href: string;
   className?: string;
-}) => <li>
-    <a href={href} className={cn("text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group font-labrador", className)}>
-      <span className="group-hover:translate-x-1 transition-transform text-slate-50">
+}) => (
+  <li>
+    <a 
+      href={href} 
+      className={cn(
+        "text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group font-labrador",
+        className
+      )}
+    >
+      <span className="group-hover:translate-x-1 transition-transform">
         {children}
       </span>
     </a>
-  </li>;
+  </li>
+);
+
 export default Footer;
