@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -73,6 +74,7 @@ export default {
 					orange: '#ffb138',
 					pink: '#fe206b',
 					green: '#3be991',
+					navy: '#1A2238', // Added the missing brand-navy color
 				}
 			},
 			borderRadius: {
@@ -125,6 +127,7 @@ export default {
 				kaleko: ['Kaleko 205 Heavy', 'sans-serif'],
 				labrador: ['Labrador B Bold', 'serif'],
 				mairy: ['Mairy Light Italic', 'serif'],
+				montserrat: ['Montserrat', 'sans-serif'], // Added Montserrat font
 			}
 		}
 	},
