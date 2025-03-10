@@ -100,7 +100,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-brand-green/20 to-brand-orange/20 rounded-2xl transform rotate-3 scale-105"></div>
               <div className="relative bg-white p-2 rounded-2xl shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Digital Agency Team"
                   className="w-full h-auto rounded-xl object-cover"
                   loading="eager"

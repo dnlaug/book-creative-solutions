@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="text-2xl font-kaleko mb-6">
               agency<span className="text-brand-pink">.</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-xs font-mairy">
+            <p className="text-gray-300 mb-6 max-w-xs font-mairy">
               We create digital experiences that inspire and drive meaningful connections.
             </p>
             <div className="flex space-x-4">
@@ -48,15 +48,15 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-kaleko mb-6 text-brand-green">Contact</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-gray-400 font-mairy">
+              <li className="flex items-start gap-3 text-gray-300 font-mairy">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0 text-brand-pink" />
                 <span>123 Creative St, Design City, DC 10101</span>
               </li>
-              <li className="flex items-center gap-3 text-gray-400 font-mairy">
+              <li className="flex items-center gap-3 text-gray-300 font-mairy">
                 <Phone size={18} className="flex-shrink-0 text-brand-orange" />
                 <span>+1 (555) 123-4567</span>
               </li>
-              <li className="flex items-center gap-3 text-gray-400 font-mairy">
+              <li className="flex items-center gap-3 text-gray-300 font-mairy">
                 <Mail size={18} className="flex-shrink-0 text-brand-green" />
                 <span>hello@agencywebsite.com</span>
               </li>
@@ -65,10 +65,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 pt-6 mt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm mb-4 md:mb-0 font-labrador">
+          <div className="text-gray-300 text-sm mb-4 md:mb-0 font-labrador">
             © {currentYear} Agency. All rights reserved.
           </div>
-          <div className="flex space-x-6 text-sm text-gray-400 font-mairy">
+          <div className="flex space-x-6 text-sm text-gray-300 font-mairy">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
@@ -115,7 +115,7 @@ const FooterLink = ({
     <a 
       href={href} 
       className={cn(
-        "text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group font-labrador",
+        "text-gray-300 hover:text-white transition-colors flex items-center gap-1.5 group font-labrador",
         className
       )}
     >
