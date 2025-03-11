@@ -66,7 +66,7 @@ const Hero = () => {
               </div>
 
               <div className="absolute -bottom-6 -left-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float hidden sm:block">
-                <div className="font-kaleko text-accent">Creative Design</div>
+                <div className="font-kaleko text-primary">Creative Design</div>
                 <div className="text-sm text-gray-600 font-mairy">
                   Award-winning designs that inspire
                 </div>
