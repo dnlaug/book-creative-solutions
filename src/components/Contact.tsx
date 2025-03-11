@@ -164,7 +164,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-labrador mb-2">
+                  <label htmlFor="phone" className="block text-md font-labrador mb-2">
                     Phone Number
                   </label>
                   <Input id="phone" name="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} className="w-full border-[#3be991]/30 focus:border-[#3be991] focus:ring-[#3be991] font-mairy" />
