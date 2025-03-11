@@ -17,8 +17,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="text-2xl font-kaleko mb-6">
-              agency<span className="text-brand-pink">.</span>
+            <div className="text-2xl font-kaleko mb-6 text-white">
+              agency<span className="text-highlight">.</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-xs font-mairy">
               We create digital experiences that inspire and drive meaningful connections.
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-kaleko mb-6 text-brand-orange">Company</h3>
+            <h3 className="text-lg font-kaleko mb-6 text-highlight">Company</h3>
             <ul className="space-y-4">
               {[
                 { name: "About Us", link: "#about" },
@@ -46,18 +46,18 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-kaleko mb-6 text-brand-green">Contact</h3>
+            <h3 className="text-lg font-kaleko mb-6 text-white">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400 font-mairy">
-                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-brand-pink" />
+                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-accent" />
                 <span>123 Creative St, Design City, DC 10101</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 font-mairy">
-                <Phone size={18} className="flex-shrink-0 text-brand-orange" />
+                <Phone size={18} className="flex-shrink-0 text-highlight" />
                 <span>+1 (555) 123-4567</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 font-mairy">
-                <Mail size={18} className="flex-shrink-0 text-brand-green" />
+                <Mail size={18} className="flex-shrink-0 text-primary" />
                 <span>hello@agencywebsite.com</span>
               </li>
             </ul>
@@ -84,7 +84,7 @@ const Footer = () => {
 
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-brand-pink hover:bg-brand-pink/90 w-10 h-10 rounded-full flex items-center justify-center transition-colors z-10"
+        className="fixed bottom-6 right-6 bg-accent hover:bg-accent/90 w-10 h-10 rounded-full flex items-center justify-center transition-colors z-10"
         aria-label="Back to top"
       >
         <ArrowUp size={20} />
@@ -96,7 +96,7 @@ const Footer = () => {
 const SocialIcon = ({ icon }: { icon: React.ReactNode }) => (
   <a
     href="#"
-    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-pink flex items-center justify-center transition-colors"
+    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-accent flex items-center justify-center transition-colors"
   >
     {icon}
   </a>
