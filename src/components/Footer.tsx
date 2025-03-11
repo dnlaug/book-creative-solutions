@@ -17,8 +17,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="text-2xl font-kaleko mb-6">
-              agency<span className="text-highlight">.</span>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/a271e562-dd7b-4dda-a59d-58b756f7a2e0.png" 
+                alt="Agency Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6 max-w-xs font-mairy">
               We create digital experiences that inspire and drive meaningful connections.

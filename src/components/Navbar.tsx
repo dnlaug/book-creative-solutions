@@ -63,8 +63,12 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#home" className="text-2xl font-kaleko z-50">
-          agency<span className="text-highlight">.</span>
+        <a href="#home" className="z-50">
+          <img 
+            src="/lovable-uploads/a271e562-dd7b-4dda-a59d-58b756f7a2e0.png" 
+            alt="Agency Logo" 
+            className="h-10 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
