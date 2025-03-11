@@ -68,12 +68,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				blue: {
-					600: '#0167fe',
+					600: '#0168ff',
 				},
 				brand: {
 					orange: '#ffb138',
-					pink: '#fe206e',
-					navy: '#10162b',
+					pink: '#fe206b',
+					green: '#3be991',
+					navy: '#1A2238',
 				},
 				highlight: '#ffb138',
 				'base-light': '#f3f3f3',

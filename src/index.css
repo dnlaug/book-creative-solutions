@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* Custom fonts - Make sure you have licenses for these fonts before using in production */
 @font-face {
@@ -263,7 +262,7 @@
 }
 
 .portfolio-overlay span {
-  @apply text-highlight font-medium;
+  @apply text-brand-green font-medium;
 }
 
 .portfolio-overlay .btn {

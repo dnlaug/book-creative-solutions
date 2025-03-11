@@ -84,7 +84,7 @@ const Navbar = () => {
           ))}
           <Button 
             size="sm" 
-            className="rounded-full px-6 bg-highlight hover:bg-highlight/90 font-labrador text-white"
+            className="rounded-full px-6 bg-accent hover:bg-accent/90 font-labrador text-white"
             onClick={(e) => {
               e.preventDefault();
               handleNavLinkClick("#contact");
@@ -127,7 +127,7 @@ const Navbar = () => {
           ))}
           <Button 
             size="lg" 
-            className="rounded-full mt-4 px-8 bg-highlight hover:bg-highlight/90 font-labrador text-white"
+            className="rounded-full mt-4 px-8 bg-accent hover:bg-accent/90 font-labrador text-white"
             onClick={(e) => {
               e.preventDefault();
               handleNavLinkClick("#contact");
