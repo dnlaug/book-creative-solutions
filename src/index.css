@@ -108,6 +108,41 @@
   }
 }
 
+/* Custom theme colors */
+.text-primary, 
+.hover\:text-primary:hover {
+  color: #0167fe;
+}
+
+.bg-primary, 
+.hover\:bg-primary:hover {
+  background-color: #0167fe;
+}
+
+.text-accent, 
+.hover\:text-accent:hover {
+  color: #fe206e;
+}
+
+.bg-accent, 
+.hover\:bg-accent:hover {
+  background-color: #fe206e;
+}
+
+.text-highlight, 
+.hover\:text-highlight:hover {
+  color: #ffb138;
+}
+
+.bg-highlight, 
+.hover\:bg-highlight:hover {
+  background-color: #ffb138;
+}
+
+.bg-base-light {
+  background-color: #f3f3f3;
+}
+
 .animate-reveal {
   opacity: 0;
   transform: translateY(20px);
