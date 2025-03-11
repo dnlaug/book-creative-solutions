@@ -65,8 +65,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#home" className="z-50">
           <img 
-            src="/lovable-uploads/a271e562-dd7b-4dda-a59d-58b756f7a2e0.png" 
-            alt="Agency Logo" 
+            src="/lovable-uploads/logosvg.svg" 
+            alt="Book Criativo" 
             className="h-10 w-auto"
           />
         </a>
