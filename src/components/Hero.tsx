@@ -61,7 +61,7 @@ const Hero = () => {
           <AnimatedElement className="relative order-first lg:order-last" direction="left" delay={300}>
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
-              <div className="relative p-2 animate-float">
+              <div className="relative p-1">
                 <img alt="Digital Agency Team" loading="eager" src="/lovable-uploads/4d955f08-8be6-4726-8741-f7c223e16dd3.png" className="w-full h-auto rounded-xl object-cover" />
               </div>
 
