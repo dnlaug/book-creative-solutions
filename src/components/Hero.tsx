@@ -62,7 +62,7 @@ const Hero = () => {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               <div className="relative p-1">
-                <img alt="Digital Agency Team" loading="eager" className="w-full h-auto rounded-xl object-cover" src="/lovable-uploads/b2820056-a3e1-43aa-b91b-ce4f120bef43.png" />
+                <img alt="Digital Agency Team" loading="eager" src="/lovable-uploads/4d955f08-8be6-4726-8741-f7c223e16dd3.png" className="w-full h-auto rounded-xl object-cover" />
               </div>
 
               
