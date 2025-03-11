@@ -150,7 +150,7 @@ const Contact = () => {
               <h3 className="text-2xl font-kaleko mb-6 text-[#fe206b]">Send us a message</h3>
               <form onSubmit={handleSubmit} className="space-y-6 flex-grow flex flex-col">
                 <div>
-                  <label htmlFor="name" className="block text-lg font-labrador mb-2">
+                  <label htmlFor="name" className="block text-md font-labrador mb-2">
                     Name
                   </label>
                   <Input id="name" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required className="w-full border-[#ffb138]/30 focus:border-[#ffb138] focus:ring-[#ffb138] font-mairy" />
