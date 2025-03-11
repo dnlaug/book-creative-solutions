@@ -157,7 +157,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-labrador mb-2">
+                  <label htmlFor="email" className="block text-lg font-labrador mb-2">
                     Email
                   </label>
                   <Input id="email" name="email" type="email" placeholder="Your email" value={formData.email} onChange={handleChange} required className="w-full border-[#fe206b]/30 focus:border-[#fe206b] focus:ring-[#fe206b] font-mairy" />
