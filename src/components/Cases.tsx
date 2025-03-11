@@ -134,13 +134,13 @@ const Cases = () => {
           </p>
         </AnimatedElement>
 
-        {/* Category filters */}
+        {/* Category filters - Updated to use font-mairy */}
         <AnimatedElement direction="up" className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category, index) => (
             <button
               key={index}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 font-mairy ${
                 activeCategory === category
                   ? "bg-brand-pink text-white shadow-md"
                   : "bg-white hover:bg-gray-100 text-gray-600"

@@ -71,7 +71,7 @@ const Navbar = () => {
           />
         </a>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Increased font size from text-base to text-lg */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {navItems.map((item) => (
             <a
@@ -81,7 +81,7 @@ const Navbar = () => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
               }}
-              className="text-base font-labrador transition-colors hover:text-primary"
+              className="text-lg font-labrador transition-colors hover:text-primary"
             >
               {item.label}
             </a>
@@ -108,7 +108,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Also increased font size */}
       <div
         className={cn(
           "fixed inset-0 bg-white/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
@@ -120,7 +120,7 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-xl font-labrador transition-colors hover:text-primary"
+              className="text-2xl font-labrador transition-colors hover:text-primary"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavLinkClick(item.href);
