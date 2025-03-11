@@ -43,7 +43,7 @@ const About = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <Users className="w-5 h-5 text-brand-pink" />
-                    <span className="font-kaleko text-brand-pink">30+</span>
+                    <span className="font-kaleko text-brand-green">30+</span>
                   </div>
                   <p className="text-sm text-gray-600 font-mairy">Talented experts</p>
                 </div>
