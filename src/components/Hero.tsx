@@ -62,7 +62,7 @@ const Hero = () => {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-highlight/20 rounded-2xl transform rotate-3 scale-105"></div>
               <div className="relative bg-white p-2 rounded-2xl shadow-xl">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Digital Agency Team" className="w-full h-auto rounded-xl object-cover" loading="eager" />
+                <img alt="Digital Agency Team" loading="eager" src="/lovable-uploads/4d955f08-8be6-4726-8741-f7c223e16dd3.png" className="w-full h-auto rounded-xl object-cover" />
               </div>
 
               <div className="absolute -bottom-6 -left-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float hidden sm:block">

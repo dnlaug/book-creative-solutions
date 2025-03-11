@@ -139,7 +139,7 @@ const Cases = () => {
                       </span>)}
                   </div>
                   <div className="flex items-start mt-3">
-                    <Button variant="ghost" size="sm" className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-2 group/btn">
+                    <Button variant="ghost" size="sm" className="text-white hover:text-white hover:bg-white/20 h-auto gap-1 pl-2 group/btn rounded-full">
                       View Project
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </Button>
@@ -154,7 +154,7 @@ const Cases = () => {
           </div>}
 
         <AnimatedElement direction="up" delay={450} className="mt-16 text-center">
-          <Button variant="outline" size="lg" className="rounded-full px-8 group border-brand-pink text-brand-pink hover:bg-brand-pink/10">
+          <Button variant="outline" size="lg" className="px-8 group border-brand-pink text-brand-pink hover:bg-brand-pink/10 rounded-full">
             View All Work
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
