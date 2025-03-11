@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6 md:space-y-8">
             <AnimatedElement className="space-y-4" direction="up">
-              <div className="inline-block rounded-full px-3 py-1 text-sm bg-gray-100 text-gray-800 font-labrador">
+              <div className="inline-block rounded-full px-3 py-1 text-sm bg-gray-200 text-gray-800 font-labrador">
                 Digital Agency
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kaleko leading-tight tracking-tighter text-balance">
