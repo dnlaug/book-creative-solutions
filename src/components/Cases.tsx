@@ -178,7 +178,7 @@ const Cases = () => {
               }}>
                   <div className="relative p-8 md:p-10 bg-gray-50 rounded-2xl border border-gray-100">
                     <div className="absolute top-6 left-6 text-brand-green/20">
-                      <Quote size={48} className="rotate-180" />
+                      <Quote size={48} className="rotate-180 opacity-75" />
                     </div>
                     
                     <div className="relative z-10">
