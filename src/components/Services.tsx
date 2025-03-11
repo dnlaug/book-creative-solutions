@@ -47,13 +47,13 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="section bg-gray-50">
+    <section id="services" className="section bg-base-light">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedElement direction="up" className="text-center mb-16 max-w-2xl mx-auto">
-          <div className="inline-block rounded-full px-3 py-1 text-sm bg-brand-green/20 text-gray-800 font-labrador mb-4">
+          <div className="inline-block rounded-full px-3 py-1 text-sm bg-highlight/20 text-gray-800 font-labrador mb-4">
             Our Services
           </div>
-          <h2 className="text-3xl md:text-4xl font-kaleko mb-4 tracking-tight text-brand-green">
+          <h2 className="text-3xl md:text-4xl font-kaleko mb-4 tracking-tight text-primary">
             Transforming visions into digital reality
           </h2>
           <p className="text-lg text-gray-600 text-balance font-mairy">
@@ -69,7 +69,7 @@ const Services = () => {
               delay={service.delay}
               className="hover-shadow rounded-xl bg-white p-6 border border-gray-100"
             >
-              <div className="mb-4 w-12 h-12 flex items-center justify-center rounded-lg bg-brand-green/10 text-brand-green">
+              <div className="mb-4 w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
                 {service.icon}
               </div>
               <h3 className="text-xl font-kaleko mb-2">{service.title}</h3>
@@ -78,10 +78,10 @@ const Services = () => {
           ))}
         </div>
 
-        <AnimatedElement direction="up" delay={800} className="mt-16 bg-gradient-to-br from-brand-green/5 to-brand-orange/5 rounded-2xl p-8 md:p-12">
+        <AnimatedElement direction="up" delay={800} className="mt-16 bg-gradient-to-br from-primary/5 to-highlight/5 rounded-2xl p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-kaleko mb-4 text-brand-orange">Ready to grow your business?</h3>
+              <h3 className="text-2xl md:text-3xl font-kaleko mb-4 text-highlight">Ready to grow your business?</h3>
               <p className="text-gray-600 mb-6 font-mairy">
                 Let's collaborate to create something amazing together. Our team is ready to help you achieve your goals.
               </p>
@@ -93,7 +93,7 @@ const Services = () => {
                   "Ongoing support and growth"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-brand-pink mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
                     <span className="font-labrador">{item}</span>
                   </div>
                 ))}

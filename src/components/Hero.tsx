@@ -53,7 +53,7 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="rounded-full px-6 group bg-accent hover:bg-accent/90 font-labrador text-white"
+                  className="rounded-full px-6 group bg-highlight hover:bg-highlight/90 font-labrador text-white"
                   onClick={() => handleButtonClick("#contact")}
                 >
                   Contact Us
@@ -62,7 +62,7 @@ const Hero = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="rounded-full px-6 font-labrador border-highlight text-highlight hover:bg-highlight/10"
+                  className="rounded-full px-6 font-labrador border-primary text-primary hover:bg-primary/10"
                   onClick={() => handleButtonClick("#cases")}
                 >
                   Our Work
