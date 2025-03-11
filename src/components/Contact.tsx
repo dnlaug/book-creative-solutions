@@ -171,7 +171,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex-grow">
-                  <label htmlFor="message" className="block text-sm font-labrador mb-2">
+                  <label htmlFor="message" className="block text-md font-labrador mb-2">
                     Message
                   </label>
                   <Textarea id="message" name="message" placeholder="Tell us about your project" value={formData.message} onChange={handleChange} required className="w-full min-h-[150px] flex-grow border-gray-200 focus:border-[#ffb138] focus:ring-[#ffb138] font-mairy" />
