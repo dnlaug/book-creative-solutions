@@ -19,8 +19,8 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/a271e562-dd7b-4dda-a59d-58b756f7a2e0.png" 
-                alt="Agency Logo" 
+                src="/lovable-uploads/logosvg.svg" 
+                alt="Book Criativo" 
                 className="h-12 w-auto"
               />
             </div>
