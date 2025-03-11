@@ -36,11 +36,11 @@ const Hero = () => {
               <div className="inline-block rounded-full px-3 py-1 text-sm bg-gray-200 text-gray-800 font-labrador">
                 Digital Agency
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kaleko leading-tight tracking-tighter text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-kaleko leading-tight tracking-tighter text-balance lg:text-6xl text-slate-50">
                 We craft digital experiences that{" "}
                 <span className="text-highlight">matter</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-lg text-balance font-mairy">
+              <p className="text-base sm:text-lg md:text-xl max-w-lg text-balance font-mairy text-slate-50">
                 We transform your ideas into exceptional digital products through strategic thinking and creative design.
               </p>
             </AnimatedElement>
@@ -51,7 +51,7 @@ const Hero = () => {
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full px-6 font-labrador border-primary text-primary hover:bg-primary/10" onClick={() => handleButtonClick("#cases")}>
+                <Button variant="outline" size="lg" onClick={() => handleButtonClick("#cases")} className="rounded-full px-6 font-labrador border-primary text-primary hover:bg-primary/10">
                   Our Work
                 </Button>
               </div>
@@ -65,19 +65,9 @@ const Hero = () => {
                 <img alt="Digital Agency Team" loading="eager" src="/lovable-uploads/4d955f08-8be6-4726-8741-f7c223e16dd3.png" className="w-full h-auto rounded-xl object-cover" />
               </div>
 
-              <div className="absolute -bottom-6 -left-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float hidden sm:block">
-                <div className="font-kaleko text-primary">Creative Design</div>
-                <div className="text-sm text-gray-600 font-mairy">
-                  Award-winning designs that inspire
-                </div>
-              </div>
+              
 
-              <div className="absolute -top-6 -right-6 glass-card rounded-lg p-4 shadow-lg max-w-[200px] animate-float animation-delay-1000 hidden sm:block">
-                <div className="font-kaleko text-primary">Digital Strategy</div>
-                <div className="text-sm text-gray-600 font-mairy">
-                  Strategic solutions for growth
-                </div>
-              </div>
+              
             </div>
           </AnimatedElement>
         </div>
