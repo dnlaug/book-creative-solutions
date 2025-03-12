@@ -21,9 +21,9 @@ const Hero = () => {
       }, 100);
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-base-light bg-blue-700">
+  return <section id="home" className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b bg-primary">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-highlight/10 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute top-1/3 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute bottom-1/4 right-0 w-64 h-64 rounded-full bg-primary/10 blur-3xl opacity-30"></div>
@@ -33,26 +33,20 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6 md:space-y-8">
             <AnimatedElement className="space-y-4" direction="up">
-              <div className="inline-block rounded-full px-3 py-1 text-sm bg-gray-200 text-gray-800 font-labrador">
-                Digital Agency
-              </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-kaleko leading-tight tracking-tighter text-balance lg:text-6xl text-slate-50">
-                We craft digital experiences that{" "}
-                <span className="text-highlight">matter</span>
+              Redefinimos o {" "}
+                <span className="text-highlight">extraordinário.</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl max-w-lg text-balance font-mairy text-slate-50">
-                We transform your ideas into exceptional digital products through strategic thinking and creative design.
+              Estamos aqui para trazer soluções inteligentes e inovadoras em um mundo cada vez mais digital.
               </p>
             </AnimatedElement>
 
             <AnimatedElement delay={200} direction="up">
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="rounded-full px-6 group bg-highlight hover:bg-highlight/90 font-labrador text-white" onClick={() => handleButtonClick("#contact")}>
-                  Contact Us
+                <Button size="lg" className="rounded-full px-6 font-labrador text-lg group bg-highlight hover:bg-highlight/90 text-white" onClick={() => handleButtonClick("#contact")}>
+                  Fale conosco
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button variant="outline" size="lg" onClick={() => handleButtonClick("#cases")} className="rounded-full px-6 font-labrador border-primary text-primary hover:bg-primary/10">
-                  Our Work
                 </Button>
               </div>
             </AnimatedElement>
@@ -64,10 +58,6 @@ const Hero = () => {
               <div className="relative p-1">
                 <img alt="Digital Agency Team" loading="eager" className="w-full h-auto rounded-xl object-cover" src="/lovable-uploads/6c4d0c89-a364-4ff6-9cbc-48bf2f9ac45d.png" />
               </div>
-
-              
-
-              
             </div>
           </AnimatedElement>
         </div>

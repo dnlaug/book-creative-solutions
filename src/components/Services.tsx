@@ -10,40 +10,40 @@ const services = [{
   icon: <Palette className="w-6 h-6" />,
   title: "UI/UX Design",
   description: "Create beautiful, intuitive interfaces that enhance user experiences.",
-  delay: 150
+  delay: 0
 }, {
   icon: <Code className="w-6 h-6" />,
   title: "Development",
   description: "Expert web and mobile solutions built with the latest technologies.",
-  delay: 300
+  delay: 0
 }, {
   icon: <MonitorSmartphone className="w-6 h-6" />,
   title: "Responsive",
   description: "All solutions perfectly adapt to any device and screen size.",
-  delay: 450
+  delay: 0
 }, {
   icon: <BarChart3 className="w-6 h-6" />,
   title: "Analytics",
   description: "Data-driven insights to improve performance and ROI.",
-  delay: 600
+  delay: 0
 }, {
   icon: <MessageSquare className="w-6 h-6" />,
   title: "Support",
   description: "Ongoing assistance and maintenance for sustained success.",
-  delay: 750
+  delay: 0
 }];
 const Services = () => {
-  return <section id="services" className="section bg-base-light">
+  return <section id="services" className="section bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedElement direction="up" className="text-center mb-16 max-w-2xl mx-auto">
-          <div className="inline-block rounded-full px-3 py-1 text-sm bg-highlight/20 text-gray-800 font-labrador mb-4">
-            Our Services
-          </div>
-          <h2 className="text-3xl md:text-4xl font-kaleko mb-4 tracking-tight text-primary">
-            Transforming visions into digital reality
+          { <div className="inline-block rounded-full px-6 py-1 text-md bg-highlight/80 text-slate-50 font-labrador mb-6">
+            Serviços
+          </div> }
+          <h2 className="text-3xl md:text-4xl font-kaleko mb-4 tracking-tight text-highlight">
+            Criatividade sem limites e foco em resultados
           </h2>
-          <p className="text-lg text-gray-600 text-balance font-mairy">
-            Our comprehensive digital services that help businesses grow and succeed in the digital landscape.
+          <p className="text-lg text-slate-50 text-balance font-mairy">
+            Nós transformamos ideias em experiências inesquecíveis.
           </p>
         </AnimatedElement>
 
@@ -60,7 +60,7 @@ const Services = () => {
         <AnimatedElement direction="up" delay={800} className="mt-16 bg-gradient-to-br from-primary/5 to-highlight/5 rounded-2xl p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-kaleko mb-4 text-highlight">Ready to grow your business?</h3>
+                <h3 className="text-2xl md:text-3xl font-kaleko mb-4 text-highlight">Pronto para fazer seu negócio crescer?</h3>
               <p className="text-gray-600 mb-6 font-mairy">
                 Let's collaborate to create something amazing together. Our team is ready to help you achieve your goals.
               </p>
