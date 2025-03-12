@@ -63,7 +63,22 @@ const Hero = () => {
         </div>
       </div>
 
-      <button onClick={scrollToNext} className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce w-10 h-10 flex items-center justify-center" aria-label="Scroll Down">
+      
+      {/* Onda no final da seção ou translate-y-1/4*/}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none ">
+          <svg
+            className="relative block w-full translate-y-1/4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="white"
+              fillOpacity="1"
+              d="M0,160L48,165.3C96,171,192,181,288,165.3C384,149,480,107,576,106.7C672,107,768,149,864,165.3C960,181,1056,171,1152,138.7C1248,107,1344,53,1392,26.7L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        <button onClick={scrollToNext} className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce w-10 h-10 flex items-center justify-center" aria-label="Scroll Down">
         <ChevronDown size={24} className="text-highlight" />
       </button>
     </section>;
