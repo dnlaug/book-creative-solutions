@@ -67,6 +67,12 @@ const Navbar = () => {
         }} className="text-white transition-colors hover:text-white/80 font-kaleko text-sm">
               {item.label}
             </a>)}
+            <Button size="sm" className="rounded-full px-6 bg-highlight hover:bg-highlight/90 font-labrador text-white" onClick={e => {
+           e.preventDefault();
+           handleNavLinkClick("#contact");
+         }}>
+             Fale conosco
+           </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -84,6 +90,12 @@ const Navbar = () => {
         }}>
               {item.label}
             </a>)}
+            <Button size="lg" className="rounded-full mt-4 px-8 bg-highlight hover:bg-highlight/90 font-labrador text-white" onClick={e => {
+           e.preventDefault();
+           handleNavLinkClick("#contact");
+         }}>
+             Fale Conosco
+           </Button>
         </nav>
       </div>
     </header>

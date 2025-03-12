@@ -53,10 +53,14 @@ const Hero = () => {
           </div>
 
           <AnimatedElement className="relative order-first lg:order-last" direction="left" delay={300}>
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              
+            <div className="relative mx-auto w-full max-w-3xl lg:max-w-5xl">
               <div className="relative p-1">
-                <img alt="Digital Agency Team" loading="eager" className="w-full h-auto rounded-xl object-cover" src="/lovable-uploads/6c4d0c89-a364-4ff6-9cbc-48bf2f9ac45d.png" />
+                <img 
+                  alt="Book Creative Solutions" 
+                  loading="eager" 
+                  className="w-full h-auto rounded-xl" 
+                  src="/lovable-uploads/logosvg.svg" 
+                />
               </div>
             </div>
           </AnimatedElement>
