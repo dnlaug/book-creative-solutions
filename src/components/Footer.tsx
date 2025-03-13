@@ -13,13 +13,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white pt-20 pb-6">
+    <footer className="bg-gray-900 text-white pt-10 pb-6">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/logosvg.svg" 
+                src="/lovable-uploads/logo-2.png" 
                 alt="Book Criativo" 
                 className="h-12 w-auto"
               />
