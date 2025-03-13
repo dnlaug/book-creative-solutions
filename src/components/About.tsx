@@ -7,9 +7,8 @@ const About = () => {
           <AnimatedElement direction="right" className="order-last lg:order-first">
             <div className="relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1521737711867-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="Our team" className="w-full h-auto object-cover" />
+                <img src="https://images.unsplash.com/photo-1521737711867-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="Nosso time" className="w-full h-auto object-cover" />
               </div>
-              
               <div className="absolute -bottom-6 -right-6 glass-card rounded-lg p-4 shadow-lg max-w-[250px] hidden md:block">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange">
@@ -29,14 +28,14 @@ const About = () => {
           
           <AnimatedElement direction="left">
             <div className="space-y-6">
-              <div className="inline-block rounded-full px-3 py-1 text-sm bg-brand-orange/20 text-gray-800 font-labrador">
-                About Us
+              <div className="inline-block rounded-full px-4 py-1 text-sm bg-brand-orange/80 text-white font-labrador">
+                Sobre nós
               </div>
               <h2 className="text-3xl md:text-4xl font-kaleko tracking-tight text-brand-orange">
-                We create digital experiences that people love
+              Mentes criativas e profissionais dedicados que vivem e respiram inovação.
               </h2>
               <p className="text-lg text-gray-600 font-mairy">
-                Founded in 2015, we're a team of designers, developers, and strategists passionate about creating exceptional digital solutions that help businesses grow and succeed.
+              Cada membro traz uma paixão única pelo que faz, e juntos formamos um time que está sempre pronto para transformar desafios em oportunidades.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
@@ -67,7 +66,7 @@ const About = () => {
               
               <div className="space-y-4 pt-2">
                 <p className="text-gray-600 font-labrador">
-                  Our mission is to help businesses transform their digital presence through innovative design, strategic thinking, and technical excellence. We believe in creating meaningful experiences that connect brands with their audiences.
+                Na Book, acreditamos no poder da colaboração e na força das ideias. É essa união de talentos que nos permite ir além e oferecer soluções que realmente fazem a diferença para a sua marca.
                 </p>
               </div>
             </div>

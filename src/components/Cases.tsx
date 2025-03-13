@@ -12,36 +12,36 @@ const projects = [{
   delay: 0
 }, {
   title: "Financial App",
-  category: "Mobile",
+  category: "Marca",
   tags: ["mobile", "development", "fintech"],
   image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-  delay: 150
+  delay: 0
 }, {
   title: "Educational Platform",
   category: "Digital",
   tags: ["web", "education", "development"],
   image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-  delay: 300
+  delay: 0
 }, {
   title: "Branding Campaign",
-  category: "Brand",
+  category: "Fotos",
   tags: ["branding", "design", "marketing"],
   image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-  delay: 450
+  delay: 0
 }, {
   title: "Product Launch Video",
-  category: "Audio & Video",
+  category: "Áudio & Vídeo",
   tags: ["video", "production", "marketing"],
   image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-  delay: 600
+  delay: 0
 }, {
   title: "Marketing Strategy",
-  category: "Strategy",
+  category: "Mídia Externa",
   tags: ["strategy", "marketing", "consulting"],
   image: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-  delay: 750
+  delay: 0
 }];
-const categories = ["All", "Brand", "Digital", "Mobile", "Strategy", "Audio & Video"];
+const categories = ["Tudo", "Marca", "Digital", "Fotos", "Mídia Externa", "Áudio & Vídeo"];
 const testimonials = [{
   content: "Working with this team was a game-changer for our business. They understood our vision and delivered beyond our expectations.",
   author: "Sarah Johnson",
@@ -90,7 +90,7 @@ const Cases = () => {
   useEffect(() => {
     setIsFiltering(true);
     setTimeout(() => {
-      if (activeCategory === "All") {
+      if (activeCategory === "Tudo") {
         setFilteredProjects(projects);
       } else {
         setFilteredProjects(projects.filter(project => project.category === activeCategory));
@@ -101,14 +101,14 @@ const Cases = () => {
   return <section id="cases" className="section bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedElement direction="up" className="text-center mb-16 max-w-2xl mx-auto">
-          <div className="inline-block rounded-full px-3 py-1 text-sm bg-brand-pink/20 text-gray-800 font-labrador mb-4">
-            Our Work
+          <div className="inline-block rounded-full px-3 py-1 text-sm bg-brand-pink/60 text-white font-labrador mb-4">
+          Portifólio
           </div>
           <h2 className="text-3xl md:text-4xl font-kaleko mb-4 tracking-tight text-brand-pink">
-            Featured projects
+          Transformando desafios em oportunidades.
           </h2>
           <p className="text-lg text-gray-600 text-balance font-mairy">
-            Explore our portfolio of successful projects that have helped our clients achieve their goals.
+          Invista em criatividade, estratégia e resultados reais. 
           </p>
         </AnimatedElement>
 
@@ -154,8 +154,8 @@ const Cases = () => {
           </div>}
 
         <AnimatedElement direction="up" delay={450} className="mt-16 text-center">
-          <Button variant="outline" size="lg" className="px-8 group border-brand-pink text-brand-pink hover:bg-brand-pink/10 rounded-full">
-            View All Work
+          <Button size="lg" className="rounded-full px-6 bg-highlight hover:bg-highlight/90 font-labrador text-white">
+            Todas as entregas
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </AnimatedElement>
@@ -164,10 +164,10 @@ const Cases = () => {
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border-t-4 border-brand-orange">
             <div className="text-center mb-10">
               <h3 className="text-2xl md:text-3xl font-kaleko tracking-tight mb-4 text-brand-orange">
-                What our clients say about us
+              O que dizem nossos clientes
               </h3>
               <p className="text-gray-600 max-w-2xl mx-auto font-mairy">
-                We're proud of the relationships we've built and the impact we've made for our clients.
+              Temos orgulho dos relacionamentos que construímos e do impacto que causamos para nossos clientes.
               </p>
             </div>
             

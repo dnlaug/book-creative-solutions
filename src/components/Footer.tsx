@@ -17,15 +17,15 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="mb-6">
+            <div className="mb-2">
               <img 
                 src="/lovable-uploads/logo-2.png" 
                 alt="Book Criativo" 
                 className="h-12 w-auto"
               />
             </div>
-            <p className="text-gray-400 mb-6 max-w-xs font-mairy">
-              We create digital experiences that inspire and drive meaningful connections.
+            <p className="text-gray-400 mb-8 max-w-xs font-mairy">
+            Nos contratar é investir em criatividade, estratégia e resultados reais.
             </p>
             <div className="flex space-x-4">
               <SocialIcon icon={<Facebook size={18} />} />
@@ -36,13 +36,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-kaleko mb-6 text-highlight">Company</h3>
+            <h3 className="text-lg font-kaleko mb-6 text-stage-50">A empresa</h3>
             <ul className="space-y-4">
               {[
-                { name: "About Us", link: "#about" },
-                { name: "Our Work", link: "#cases" },
-                { name: "Services", link: "#services" },
-                { name: "Contact Us", link: "#contact" }
+                { name: "Serviços", link: "#services" },
+                { name: "Sobre nós", link: "#about" },
+                { name: "Portifólio", link: "#cases" },
+                { name: "Fale conosco", link: "#contact" }
               ].map((item, index) => (
                 <FooterLink key={index} href={item.link}>{item.name}</FooterLink>
               ))}
@@ -50,19 +50,19 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-kaleko mb-6 text-primary">Contact</h3>
+            <h3 className="text-lg font-kaleko mb-6 text-stage-50">Contato</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400 font-mairy">
-                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-accent" />
-                <span>123 Creative St, Design City, DC 10101</span>
+                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-primary" />
+                <span>Telêmaco Borba, Paraná</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 font-mairy">
-                <Phone size={18} className="flex-shrink-0 text-highlight" />
-                <span>+1 (555) 123-4567</span>
+                <Phone size={18} className="flex-shrink-0 text-primary" />
+                <span>+55 (42) 99804-1436</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 font-mairy">
                 <Mail size={18} className="flex-shrink-0 text-primary" />
-                <span>hello@agencywebsite.com</span>
+                <span>equipe@bookcriativo.com</span>
               </li>
             </ul>
           </div>
@@ -70,18 +70,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-6 mt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0 font-labrador">
-            © {currentYear} Agency. All rights reserved.
-          </div>
-          <div className="flex space-x-6 text-sm text-gray-400 font-mairy">
-            <a href="#" className="hover:text-white transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Cookie Policy
-            </a>
+            © {currentYear} Book Criativo. Todos os direitos reservados.
           </div>
         </div>
       </div>

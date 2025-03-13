@@ -53,7 +53,7 @@ const Navbar = () => {
     }
   };
   return (
-    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6 md:px-10", scrolled ? "bg-primary shadow-sm backdrop-blur-card" : "bg-transparent")}>
+    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6 md:px-10", scrolled ? "bg-primary shadow-sm backdrop-blur-card" : "bg-primary")}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#home" className="z-50">
           <img src="/lovable-uploads/logo-2.png" alt="Book Criativo" className="h-10 w-auto" />
