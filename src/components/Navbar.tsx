@@ -16,7 +16,7 @@ const navItems: NavItem[] = [{
   label: "Sobre nós",
   href: "#about"
 }, {
-  label: "Portfólio",
+  label: "Portifólio",
   href: "#cases"
 },];
 const Navbar = () => {
@@ -53,10 +53,10 @@ const Navbar = () => {
     }
   };
   return (
-    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6 md:px-10", scrolled ? "bg-primary/10 shadow-sm backdrop-blur-card" : "bg-transparent")}>
+    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6 md:px-10", scrolled ? "bg-primary shadow-sm backdrop-blur-card" : "bg-transparent")}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#home" className="z-50">
-          <img src="/lovable-uploads/logosvg.svg" alt="Book Criativo" className="h-10 w-auto" />
+          <img src="/lovable-uploads/logo-2.png" alt="Book Criativo" className="h-10 w-auto" />
         </a>
 
         {/* Desktop Navigation - Increased font size from text-base to text-sm */}
@@ -64,7 +64,7 @@ const Navbar = () => {
           {navItems.map(item => <a key={item.href} href={item.href} onClick={e => {
           e.preventDefault();
           handleNavLinkClick(item.href);
-        }} className="text-white transition-colors hover:text-white/80 font-kaleko text-sm">
+        }} className="text-white transition-colors hover:text-white/80 font-labrador text-md">
               {item.label}
             </a>)}
             <Button size="sm" className="rounded-full px-6 bg-highlight hover:bg-highlight/90 font-labrador text-white" onClick={e => {
